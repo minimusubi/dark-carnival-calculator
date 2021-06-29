@@ -1,0 +1,185 @@
+.category > h1 {
+	margin: 16px 0 8px;
+	font-size: 1.73em;
+	font-weight: 400;
+}
+
+.category > .stalls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.stall {
+	display: flex;
+	position: relative;
+	width: 400px;
+	margin: 24px 8px 8px 8px;
+	padding: 5px;
+	background: var(--stall-background, #201F1F);
+	font-size: 20px;
+	font-weight: 300;
+	color: #E3D8CC;
+}
+
+.stall .container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 18px 0 8px; 
+	border: 2px solid #BDB9A2;
+}
+
+.stall .title {
+	--end-cap-width: 14px;
+	--end-cap-height: 36px;
+	
+	position: absolute;
+	display: flex;
+	top: 6px;
+	left: 50%;
+	min-width: 226px;
+	height: var(--end-cap-height);
+	background: #59475F;
+	font-family: 'Kingthings Petrock';
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.stall .title::before {
+	content: '';
+	position: absolute;
+	left: calc(-1 * var(--end-cap-width));
+	border-top: calc(var(--end-cap-height) / 2) solid transparent;
+	border-right: var(--end-cap-width) solid #59475F;
+	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
+}
+
+.stall .title::after {
+	content: '';
+	position: absolute;
+	right: calc(-1 * var(--end-cap-width));
+	border-top: calc(var(--end-cap-height) / 2) solid transparent;
+	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
+	border-left: var(--end-cap-width) solid #59475F;
+}
+
+.stall .title div {
+	margin: auto;
+	text-align: center;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+.stall .outcome {
+	display: flex;
+	margin: 6px 0;
+}
+
+.stall .outcome:first-of-type {
+	margin-top: 0;
+}
+
+.stall .outcome:last-of-type {
+	margin-bottom: 0;
+}
+
+.stall .outcome .label {
+	position: relative;
+}
+
+.stall .outcome .label span,
+.stall .outcome .label img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	/* text-align: center; */
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+.stall .outcome .label img {
+	height: 75%;
+}
+
+.sign {
+	--sign-cap-width: 14px;
+	--sign-cap-height: 36px;
+	--sign-background: #59475F;
+	
+	position: relative;
+	display: flex;
+	margin-right: var(--sign-cap-width);
+	margin-left: var(--sign-cap-width);
+	height: var(--sign-cap-height);
+	background: var(--sign-background);
+	font-family: 'Kingthings Petrock';
+	font-size: 28px;
+	text-align: center;
+}
+
+.sign::before {
+	content: '';
+	position: absolute;
+	left: calc(-1 * var(--sign-cap-width));
+	border-top: calc(var(--sign-cap-height) / 2) solid transparent;
+	border-right: var(--sign-cap-width) solid var(--sign-background);
+	border-bottom: calc(var(--sign-cap-height) / 2) solid transparent;
+}
+
+.sign::after {
+	content: '';
+	position: absolute;
+	right: calc(-1 * var(--sign-cap-width));
+	border-top: calc(var(--sign-cap-height) / 2) solid transparent;
+	border-bottom: calc(var(--sign-cap-height) / 2) solid transparent;
+	border-left: var(--sign-cap-width) solid var(--sign-background);
+}
+
+.sign > .text {
+	margin: auto;
+	text-align: center;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+/* http://jtauber.github.io/articles/css-hexagon.html */
+.hexagon {
+	--end-cap-scale: 8;
+	--end-cap-width-ratio: 1px;
+	--end-cap-height-ratio: 3.46410161514px;
+	--end-cap-width: calc(var(--end-cap-width-ratio) * var(--end-cap-scale));
+	--end-cap-height: calc(var(--end-cap-height-ratio) * var(--end-cap-scale));
+	
+	position: relative;
+	display: inline-block;
+	width: calc(var(--end-cap-width) * 2);
+	height: var(--end-cap-height);
+	margin: 0 calc(var(--end-cap-width) + 8px) 0 var(--end-cap-width);
+	background: #7A5480;
+	color: #FFF;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.hexagon::before {
+	content: '';
+	position: absolute;
+	left: calc(-1 * var(--end-cap-width));
+	border-top: calc(var(--end-cap-height) / 2) solid transparent;
+	border-right: var(--end-cap-width) solid #7A5480;
+	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
+}
+
+.hexagon::after {
+	content: '';
+	position: absolute;
+	right: calc(-1 * var(--end-cap-width));
+	border-top: calc(var(--end-cap-height) / 2) solid transparent;
+	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
+	border-left: var(--end-cap-width) solid #7A5480;
+}

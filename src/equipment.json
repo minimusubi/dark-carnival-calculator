@@ -1,0 +1,248 @@
+{
+	"helmet": [
+		{
+			"name": "Feathered Hat",
+			"value": 1
+		},
+		{
+			"name": "Fancy Cap",
+			"value": 2
+		},
+		{
+			"name": "Performer's Hat",
+			"value": 3
+		},
+		{
+			"name": "Jester Cap",
+			"value": 4
+		},
+		{
+			"name": "Dream Hat",
+			"value": 5
+		},
+		{
+			"name": "Phantasm Hat",
+			"value": 6
+		},
+		{
+			"name": "Illusionist's Hat",
+			"value": 7
+		},
+		{
+			"name": "Trickster's Hat",
+			"value": 8
+		},
+		{
+			"name": "Highroller's Hat",
+			"value": 9
+		},
+		{
+			"name": "Lucky's Hat",
+			"value": 10
+		},
+		{
+			"name": "Princess Hat",
+			"value": 12
+		}
+	],
+	"armor": [
+		{
+			"name": "Gambeson",
+			"value": 1
+		},
+		{
+			"name": "Fancy Vest",
+			"value": 2
+		},
+		{
+			"name": "Performer's Vest",
+			"value": 3
+		},
+		{
+			"name": "Jester Outfit",
+			"value": 4
+		},
+		{
+			"name": "Dream Coat",
+			"value": 5
+		},
+		{
+			"name": "Phantasm Armor",
+			"value": 6
+		},
+		{
+			"name": "Illusionist's Armor",
+			"value": 7
+		},
+		{
+			"name": "Trickster's Armor",
+			"value": 8
+		},
+		{
+			"name": "Highroller's Armor",
+			"value": 9
+		},
+		{
+			"name": "Bandit King's Fur Mantle",
+			"value": 10
+		}
+	],
+	"boots": [
+		{
+			"name": "Cloth Shoes",
+			"value": 1
+		},
+		{
+			"name": "Fancy Shoes",
+			"value": 2
+		},
+		{
+			"name": "Performer's Boots",
+			"value": 3
+		},
+		{
+			"name": "Jester Boots",
+			"value": 4
+		},
+		{
+			"name": "Dream Boots",
+			"value": 5
+		},
+		{
+			"name": "Phantasm Boots",
+			"value": 6
+		},
+		{
+			"name": "Illusionist's Boots",
+			"value": 7
+		},
+		{
+			"name": "Trickster's Boots",
+			"value": 8
+		},
+		{
+			"name": "Highroller's Boots",
+			"value": 9
+		},
+		{
+			"name": "Coal Heart's Moccasins",
+			"value": 10
+		}
+	],
+	"amulet": [
+		{
+			"name": "Fancy Ruff",
+			"value": 4
+		},
+		{
+			"name": "Golden Ruff",
+			"value": 5
+		},
+		{
+			"name": "Lucky Horseshoe",
+			"value": 7
+		},
+		{
+			"name": "Rabbit's Foot",
+			"value": 9
+		},
+		{
+			"name": "Magic Dreamcatcher",
+			"value": 12
+		}
+	],
+	"trinket": [
+		{
+			"name": "Golden Feather",
+			"value": 4
+		},
+		{
+			"name": "Golden Skull",
+			"value": 6
+		},
+		{
+			"name": "Jade Ring",
+			"value": 8
+		},
+		{
+			"name": "Four Leaf Clover",
+			"value": 10
+		},
+		{
+			"name": "Black Cat",
+			"value": 13
+		}
+	],
+	"lute": [
+		{
+			"name": "Simple Lute",
+			"value": 2,
+			"unit": "%"
+		},
+		{
+			"name": "Fancy Lute",
+			"value": 5,
+			"unit": "%"
+		},
+		{
+			"name": "Ornate Lute",
+			"value": 7,
+			"unit": "%"
+		},
+		{
+			"name": "Silver Lute",
+			"value": 10,
+			"unit": "%"
+		},
+		{
+			"name": "Bone Lute",
+			"value": 12,
+			"unit": "%"
+		},
+		{
+			"name": "Royal Lute",
+			"value": 15,
+			"unit": "%"
+		}
+	],
+	"pipe": [
+		{
+			"name": "Old Pipe",
+			"value": 1
+		},
+		{
+			"name": "Elm Pipe",
+			"value": 2
+		},
+		{
+			"name": "Bone Pipe",
+			"value": 3
+		},
+		{
+			"name": "Dragon Pipe",
+			"value": 4
+		},
+		{
+			"name": "Ritual Pipe",
+			"value": 5
+		}
+	],
+	"blessing": [
+		{
+			"name": "Luck Blessing",
+			"value": 1
+		},
+		{
+			"name": "Luck Blessing",
+			"value": 2
+		},
+		{
+			"name": "Luck Blessing",
+			"value": 3
+		},
+		{
+			"name": "Luck Blessing",
+			"value": 5
+		}
+	]
+}

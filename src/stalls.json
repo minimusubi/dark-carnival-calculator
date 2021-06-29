@@ -1,0 +1,270 @@
+[
+	{
+		"category": "High Roller's Gambit",
+		"required": 75,
+		"background": "#250613",
+		"stalls": [
+			{
+				"name": "Ice of Spades",
+				"base": -15,
+				"outcomes": [
+					"Death",
+					"+3 Frozen",
+					"+2 Frozen",
+					"+1 Wet",
+					"Gambit Advance"
+				]
+			},
+			{
+				"name": "Playing With Fire",
+				"base": -20,
+				"outcomes": [
+					"Gambit Setback",
+					"+3 Burn",
+					"+2 Burn",
+					"+1 Burn",
+					"Gambit Advance"
+				]
+			},
+			{
+				"name": "Shock Paper Scissors",
+				"base": -25,
+				"outcomes": [
+					"Gambit Setback",
+					"+3 Shock",
+					"+2 Shock",
+					"+1 Scare",
+					"Gambit Advance"
+				]
+			},
+			{
+				"name": "A Wager with Chaos",
+				"base": -30,
+				"outcomes": [
+					"Death",
+					"?????",
+					"?????",
+					"?????",
+					"Discord Role"
+				]
+			}
+		]
+	},
+	{
+		"category": "Game Stalls",
+		"stalls": [
+			{
+				"name": "Gambling Den",
+				"base": 35,
+				"outcomes": [
+					{"value": -25, "type": "Gold"},
+					{"value": -10, "type": "Gold"},
+					{"value": 0, "type": "Gold"},
+					{"value": 10, "type": "Gold"},
+					{"value": 25, "type": "Gold"}
+				]
+			},
+			{
+				"name": "Game of Cards",
+				"base": 20,
+				"outcomes": [
+					{"value": -100, "type": "Gold"},
+					{"value": -50, "type": "Gold"},
+					{"value": 0, "type": "Gold"},
+					{"value": 50, "type": "Gold"},
+					{"value": 100, "type": "Gold"}
+				]
+			},
+			{
+				"name": "Merling Slap Contest",
+				"base": 10,
+				"outcomes": [
+					{"value": -200, "type": "Gold"},
+					{"value": -125, "type": "Gold"},
+					{"value": 0, "type": "Gold"},
+					{"value": 125, "type": "Gold"},
+					{"value": 200, "type": "Gold"}
+				]
+			},
+			{
+				"name": "Cockatrice Fight",
+				"base": 0,
+				"outcomes": [
+					{"value": -500, "type": "Gold"},
+					{"value": -250, "type": "Gold"},
+					{"value": 0, "type": "Gold"},
+					{"value": 250, "type": "Gold"},
+					{"value": 500, "type": "Gold"}
+				]
+			},
+			{
+				"name": "Tavern",
+				"base": -15,
+				"outcomes": [
+					{"value": 0, "type": "Gold"},
+					{"value": 250, "type": "Gold"},
+					{"value": 750, "type": "Gold"},
+					{"value": 1500, "type": "Gold"},
+					{"value": 3000, "type": "Gold"}
+				]
+			},
+			{
+				"name": "Poisonous Dunk Tank",
+				"base": -5,
+				"outcomes": [
+					"+1 Disease",
+					"+2 Poison",
+					"+1 Poison",
+					{"value": 1, "type": "Gain Item"},
+					{"value": 1, "type": "Treasure Chest"}
+				]
+			},
+			{
+				"name": "Acidic Dunk Tank",
+				"base": -25,
+				"outcomes": [
+					"Acid Bath",
+					"+1 Acid",
+					"+1 Lose Consumable",
+					"+1 Gain Item",
+					{"value": 1, "type": "Royal Chest"}
+				]
+			},
+			{
+				"name": "Cursed Dice",
+				"base": 15,
+				"outcomes": [
+					"Unlucky Curse",
+					"+1 Droll Distraction",
+					"+1 Poison",
+					"+5% Gold Multiplier for 1 Day",
+					"+10% Gold Multiplier for 1 Day"
+				]
+			},
+			{
+				"name": "Prayer to RNGesus",
+				"base": 30,
+				"outcomes": [
+					{"value": 0, "type": "Gold"},
+					"+1 Life",
+					"+2 Life",
+					{"value": 1, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"},
+					{"value": 2, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"}
+				]
+			},
+			{
+				"name": "House of Mirrors",
+				"base": 55,
+				"type": "fixed",
+				"outcomes": [
+					"Entangle",
+					"Entangle",
+					"Entangle",
+					"Nothing",
+					{"value": 1, "type": "Toy Hammer"}
+				]
+			}
+		]
+	},
+	{
+		"category": "Encounters",
+		"stalls": [
+			{
+				"name": "Field of Herbs",
+				"base": 60,
+				"type": "fixed",
+				"outcomes": [
+					"+1 Poison",
+					"Nothing",
+					"Nothing",
+					"Nothing",
+					"+1 Herb"
+				]
+			},
+			{
+				"name": "Mystery Bag",
+				"base": 60,
+				"type": "fixed",
+				"outcomes": [
+					"?????",
+					"?????",
+					"?????",
+					"?????",
+					"?????"
+				]
+			},
+			{
+				"name": "Wicked Wishing Well (Lucky)",
+				"base": 55,
+				"type": "fixed",
+				"outcomes": [
+					"?????",
+					"?????",
+					"?????",
+					"?????",
+					{"value": 1, "type": "Luck", "statLabel": "bonus luck"}
+				]
+			},
+			{
+				"name": "Wicked Wishing Well",
+				"base": 50,
+				"type": "fixed",
+				"outcomes": [
+					"?????",
+					"?????",
+					"?????",
+					"?????",
+					{"value": 1, "type": "Luck", "statLabel": "bonus luck"}
+				]
+			},
+			{
+				"name": "Aquila's Shellfish Dive",
+				"base": 40,
+				"type": "fixed",
+				"outcomes": [
+					"?????",
+					"+3 Wet",
+					"+2 Wet",
+					"+1 Wet",
+					"?????"
+				]
+			},
+			{
+				"name": "Wandering Monk",
+				"base": 35,
+				"type": "fixed",
+				"outcomes": [
+					"Nothing",
+					"Nothing",
+					"-1 Curse",
+					"-2 Curse",
+					"Lift Curses"
+				]
+			},
+			{
+				"name": "Traveling Healer",
+				"base": 35,
+				"type": "fixed",
+				"outcomes": [
+					"Nothing",
+					"Nothing",
+					"-1 Ailment",
+					"-2 Ailment",
+					"Cure Ailments"
+				]
+			},
+			{
+				"name": "Shrooms",
+				"base": 40,
+				"type": "fixed",
+				"outcomes": [
+					"Death",
+					"Unwell",
+					"+1 Poison",
+					{"value": 1, "type": "Cave Mushroom"},
+					{"value": 1, "type": "Cave Mushroom"}
+				]
+			}
+		]
+	}
+]

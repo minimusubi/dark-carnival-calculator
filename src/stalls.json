@@ -162,6 +162,7 @@
 				"name": "Drinking Contest",
 				"base": 80,
 				"type": "fixed",
+				"cost": {"value": 150, "type": "Gold"},
 				"outcomes": [
 					"Unwell",
 					"+2 Confuse",
@@ -174,6 +175,7 @@
 				"name": "Embedded Hammer",
 				"base": 70,
 				"type": "fixed",
+				"cost": null,
 				"outcomes": [
 					"Nothing",
 					"Nothing",
@@ -186,6 +188,7 @@
 				"name": "Field of Herbs",
 				"base": 65,
 				"type": "fixed",
+				"cost": null,
 				"outcomes": [
 					"+1 Poison",
 					"Nothing",
@@ -198,6 +201,7 @@
 				"name": "Mystery Bag",
 				"base": 50,
 				"type": "fixed",
+				"cost": {"value": 2, "type": "Ticket"},
 				"outcomes": [
 					"?????",
 					"?????",
@@ -210,6 +214,7 @@
 				"name": "Wicked Wishing Well (Lucky)",
 				"base": 55,
 				"type": "fixed",
+				"cost": {"value": 1, "type": "Lucky Coin"},
 				"outcomes": [
 					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},
 					"?????",
@@ -222,6 +227,7 @@
 				"name": "Wicked Wishing Well",
 				"base": 50,
 				"type": "fixed",
+				"cost": null,
 				"outcomes": [
 					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},
 					"?????",
@@ -234,6 +240,7 @@
 				"name": "Fountain of Life",
 				"base": 40,
 				"type": "fixed",
+				"cost": null,
 				"outcomes": [
 					"Nothing",
 					"Nothing",
@@ -246,6 +253,7 @@
 				"name": "Aquila's Shellfish Dive",
 				"base": 42,
 				"type": "fixed",
+				"cost": {"value": 777, "type": "Gold"},
 				"outcomes": [
 					"Chomp",
 					"+3 Wet",
@@ -258,6 +266,7 @@
 				"name": "Shrooms",
 				"base": 40,
 				"type": "fixed",
+				"cost": null,
 				"outcomes": [
 					"Death",
 					"Unwell",
@@ -270,6 +279,7 @@
 				"name": "Wandering Monk",
 				"base": 35,
 				"type": "fixed",
+				"cost": {"value": 50, "type": "Gold"},
 				"outcomes": [
 					"Nothing",
 					"Nothing",
@@ -282,6 +292,7 @@
 				"name": "Traveling Healer",
 				"base": 35,
 				"type": "fixed",
+				"cost": {"value": 50, "type": "Gold"},
 				"outcomes": [
 					"Nothing",
 					"Nothing",
@@ -293,6 +304,7 @@
 			{
 				"name": "Death's Metal",
 				"base": 5,
+				"cost": null,
 				"background": "#2C2632",
 				"outcomes": [
 					"Death",

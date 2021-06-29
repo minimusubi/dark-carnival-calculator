@@ -11,7 +11,7 @@ export default class Image extends Component {
 			
 			if (segments.length > 0) {
 				alternate = segments[segments.length - 1];
-				alternate = alternate.charAt(0).toLocaleUpperCase() + alternate.substring(1, alternate.lastIndexOf('.'));
+				alternate = alternate.charAt(0).toLocaleUpperCase() + alternate.substring(1, alternate.lastIndexOf('.')).replace(/-+/g, ' ');
 			}
 		}
 		

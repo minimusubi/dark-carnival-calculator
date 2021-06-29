@@ -1,4 +1,5 @@
 import {Component} from 'preact';
+import Image from './Image.js';
 import '../css/stall.css';
 
 const Probability = {
@@ -200,10 +201,20 @@ export default class Stall extends Component {
 		
 		// console.log(`[SUM] ${this.props.data.name} ${sum}`);
 		
+		let cost = this.props.data.cost !== undefined ? this.props.data.cost : {value: 1, type: 'Ticket'};
+		if (cost === null) {
+			cost = {value: 'FREE', type: null};
+		}
+		let costImage = cost.type ? <Image src={`../assets/${cost.type.toLowerCase().replace(/\s+/g, '-')}.png`} /> : null;
+		
 		return <div class='stall' style={this.props.data.background ? {'--stall-background': this.props.data.background} : undefined}>
 			<div class='container'>
 				<div class='title'>
 					<div>{this.props.data.name}</div>
+				</div>
+				<div class='cost'>
+					<span>{cost.value}</span>
+					{costImage}
 				</div>
 				<div style={{margin: '14px'}}>
 					{outcomes}

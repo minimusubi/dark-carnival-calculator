@@ -74,6 +74,30 @@
 	z-index: 0;
 }
 
+.stall .cost {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	top: 13px;
+	right: 7px;
+	height: 28px;
+	padding-left: 10px;
+	border-top-left-radius: 14px;
+	border-bottom-left-radius: 14px;
+	background: #59475F;
+	font-size: 16px;
+}
+
+.stall .cost span {
+	margin-right: 6px;
+}
+
+.stall .cost img {
+	height: 14px;
+	margin-right: 6px;
+}
+
 .stall .outcome {
 	display: flex;
 	margin: 6px 0;

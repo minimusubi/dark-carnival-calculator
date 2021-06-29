@@ -20,9 +20,9 @@
 				"base": -20,
 				"outcomes": [
 					"Gambit Setback",
+					"+2 Confuse",
 					"+3 Burn",
 					"+2 Burn",
-					"+1 Burn",
 					"Gambit Advance"
 				]
 			},
@@ -98,17 +98,6 @@
 				]
 			},
 			{
-				"name": "Tavern",
-				"base": -15,
-				"outcomes": [
-					{"value": 0, "type": "Gold"},
-					{"value": 250, "type": "Gold"},
-					{"value": 750, "type": "Gold"},
-					{"value": 1500, "type": "Gold"},
-					{"value": 3000, "type": "Gold"}
-				]
-			},
-			{
 				"name": "Poisonous Dunk Tank",
 				"base": -5,
 				"outcomes": [
@@ -134,7 +123,7 @@
 				"name": "Cursed Dice",
 				"base": 15,
 				"outcomes": [
-					"Unlucky Curse",
+					"+1 Curse",
 					"+1 Droll Distraction",
 					"+1 Poison",
 					"+5% Gold Multiplier for 1 Day",
@@ -145,7 +134,7 @@
 				"name": "Prayer to RNGesus",
 				"base": 30,
 				"outcomes": [
-					{"value": 0, "type": "Gold"},
+					"Nothing",
 					"+1 Life",
 					"+2 Life",
 					{"value": 1, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"},
@@ -170,8 +159,32 @@
 		"category": "Encounters",
 		"stalls": [
 			{
+				"name": "Drinking Contest",
+				"base": 80,
+				"type": "fixed",
+				"outcomes": [
+					"Unwell",
+					"+2 Confuse",
+					"+1 Confuse",
+					{"value": 100, "type": "Gold"},
+					{"value": 300, "type": "Gold"}
+				]
+			},
+			{
+				"name": "Embedded Hammer",
+				"base": 70,
+				"type": "fixed",
+				"outcomes": [
+					"Nothing",
+					"Nothing",
+					"Nothing",
+					"Nothing",
+					{"value": 1, "type": "Toy Hammer"}
+				]
+			},
+			{
 				"name": "Field of Herbs",
-				"base": 60,
+				"base": 65,
 				"type": "fixed",
 				"outcomes": [
 					"+1 Poison",
@@ -183,7 +196,7 @@
 			},
 			{
 				"name": "Mystery Bag",
-				"base": 60,
+				"base": 50,
 				"type": "fixed",
 				"outcomes": [
 					"?????",
@@ -198,7 +211,7 @@
 				"base": 55,
 				"type": "fixed",
 				"outcomes": [
-					"?????",
+					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},
 					"?????",
 					"?????",
 					"?????",
@@ -210,7 +223,7 @@
 				"base": 50,
 				"type": "fixed",
 				"outcomes": [
-					"?????",
+					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},
 					"?????",
 					"?????",
 					"?????",
@@ -218,15 +231,39 @@
 				]
 			},
 			{
-				"name": "Aquila's Shellfish Dive",
+				"name": "Fountain of Life",
 				"base": 40,
 				"type": "fixed",
 				"outcomes": [
-					"?????",
+					"Nothing",
+					"Nothing",
+					{"value": 1, "type": "Life"},
+					{"value": 2, "type": "Life"},
+					{"value": 3, "type": "Life"}
+				]
+			},
+			{
+				"name": "Aquila's Shellfish Dive",
+				"base": 42,
+				"type": "fixed",
+				"outcomes": [
+					"Chomp",
 					"+3 Wet",
 					"+2 Wet",
 					"+1 Wet",
-					"?????"
+					{"value": 1, "type": "Precious Pearl"}
+				]
+			},
+			{
+				"name": "Shrooms",
+				"base": 40,
+				"type": "fixed",
+				"outcomes": [
+					"Death",
+					"Unwell",
+					"+1 Poison",
+					{"value": 1, "type": "Cave Mushroom"},
+					{"value": 1, "type": "Cave Mushroom"}
 				]
 			},
 			{
@@ -254,15 +291,14 @@
 				]
 			},
 			{
-				"name": "Shrooms",
-				"base": 40,
-				"type": "fixed",
+				"name": "Death's Metal",
+				"base": 5,
 				"outcomes": [
 					"Death",
-					"Unwell",
-					"+1 Poison",
-					{"value": 1, "type": "Cave Mushroom"},
-					{"value": 1, "type": "Cave Mushroom"}
+					"+1 Droll Distraction",
+					"+1 Shock",
+					"+1 Shock",
+					"Unique Item"
 				]
 			}
 		]

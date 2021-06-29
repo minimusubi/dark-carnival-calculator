@@ -45,7 +45,7 @@
 					"?????",
 					"?????",
 					"?????",
-					"Discord Role"
+					{"value": 1, "type": "Discord Role", "counter": false}
 				]
 			}
 		]
@@ -115,7 +115,7 @@
 					"Acid Bath",
 					"+1 Acid",
 					"+1 Lose Consumable",
-					"+1 Gain Item",
+					{"value": 1, "type": "Gain Item"},
 					{"value": 1, "type": "Royal Chest"}
 				]
 			},
@@ -126,8 +126,8 @@
 					"+1 Curse",
 					"+1 Droll Distraction",
 					"+1 Poison",
-					"+5% Gold Multiplier for 1 Day",
-					"+10% Gold Multiplier for 1 Day"
+					{"value": 1, "type": "+5% Gold Multiplier for 1 Day", "statLabel": "5% gold multiplier", "counter": false},
+					{"value": 1, "type": "+10% Gold Multiplier for 1 Day", "statLabel": "10% gold multiplier", "counter": false}
 				]
 			},
 			{
@@ -135,8 +135,8 @@
 				"base": 30,
 				"outcomes": [
 					"Nothing",
-					"+1 Life",
-					"+2 Life",
+					{"value": 1, "type": "Life"},
+					{"value": 2, "type": "Life"},
 					{"value": 1, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"},
 					{"value": 2, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"}
 				]
@@ -191,7 +191,7 @@
 					"Nothing",
 					"Nothing",
 					"Nothing",
-					"+1 Herb"
+					{"value": 1, "type": "Herb"}
 				]
 			},
 			{
@@ -299,7 +299,7 @@
 					"+1 Droll Distraction",
 					"+1 Shock",
 					"+1 Shock",
-					"Unique Item"
+					{"value": 1, "type": "Unique Item", "counter": false}
 				]
 			}
 		]

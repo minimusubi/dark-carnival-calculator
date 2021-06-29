@@ -192,7 +192,7 @@ export default class Stall extends Component {
 				}
 				
 				averages.get(outcome.type).values.push(value * probability);
-				outcome = `${value < 0 ? '' : '+'}${value} ${outcome.type}`;
+				outcome = outcome.counter === false ? outcome.type : `${value < 0 ? '' : '+'}${value} ${outcome.type}`;
 			}
 			
 			outcomes.push(this.createOutcome(<span>{i}</span>, probability, outcome));
@@ -221,13 +221,13 @@ export default class Stall extends Component {
 					} else if (average < 1) {
 						// Calculate average tickets per one item
 						return <div key={type} style={{marginBottom: '8px', fontSize: '16px', textAlign: 'center'}}>
-							Average tickets per {(statLabel ?? type).toLowerCase()} is {this.round(1 / average * 100) / 100}
+							Average plays per {(statLabel ?? type).toLowerCase()} is {this.round(1 / average * 100) / 100}
 						</div>;
 					}
 					
 					// Calculate average items per one ticket
 					return <div key={type} style={{marginBottom: '8px', fontSize: '16px', textAlign: 'center'}}>
-						Average {(statLabel ?? type).toLowerCase()} per ticket is {this.round(average * 100) / 100}
+						Average {(statLabel ?? type).toLowerCase()} per play is {this.round(average * 100) / 100}
 					</div>;
 				})}
 				<div style={{fontSize: '12px', fontWeight: 400, textAlign: 'center', color: '#939286'}}>

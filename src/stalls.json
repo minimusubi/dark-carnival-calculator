@@ -293,6 +293,7 @@
 			{
 				"name": "Death's Metal",
 				"base": 5,
+				"background": "#2C2632",
 				"outcomes": [
 					"Death",
 					"+1 Droll Distraction",

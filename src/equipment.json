@@ -149,6 +149,10 @@
 		{
 			"name": "Magic Dreamcatcher",
 			"value": 12
+		},
+		{
+			"name": "White Cat",
+			"value": 15
 		}
 	],
 	"trinket": [
@@ -171,6 +175,10 @@
 		{
 			"name": "Black Cat",
 			"value": 13
+		},
+		{
+			"name": "Golden Hourglass",
+			"value": 18
 		}
 	],
 	"lute": [

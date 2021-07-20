@@ -1,6 +1,7 @@
 import {Component} from 'preact';
 import Image from './Image.js';
 import Hint from './Hint.js';
+import '../css/options.css';
 
 export default class StatusOptions extends Component {
 	parseNumber = (input) => {

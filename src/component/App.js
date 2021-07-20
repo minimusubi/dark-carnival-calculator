@@ -2,8 +2,8 @@ import {Component} from 'preact';
 import Image from './Image.js';
 import Stall from './Stall.js';
 import Dialog from './Dialog.js';
-import EquipmentSelector from './EquipmentSelector.js';
 import StatusOptions from './StatusOptions.js';
+import EquipmentSelector from './EquipmentSelectorv2.js';
 import LZString from 'lz-string';
 
 import '../css/style';
@@ -342,8 +342,8 @@ export default class App extends Component {
 						Special thanks to <span class='mention'>@Senerio</span> for his untold hours planning, creating, and improving the Dark Carnival!
 					</p>
 				</Dialog>
-				<EquipmentSelector equipment={this.state.equipment} onChange={this.onEquipmentChange} />
 				<StatusOptions options={this.state.options} onChange={this.onOptionChange} />
+				<EquipmentSelector equipment={this.state.equipment} onChange={this.onEquipmentChange} />
 				<main>
 					{stalls.map((category) => {
 						const categoryStalls = category.stalls.map((stall) => {

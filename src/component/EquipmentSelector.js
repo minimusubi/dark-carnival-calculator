@@ -58,14 +58,14 @@ export default class EquipmentSelector extends Component {
 				{Object.entries(equipment).filter(([type]) => {
 					return type != 'lute' && type != 'pipe';
 				}).map(([type, equips]) => {
-					return <div class='two-tone' style={{display: 'flex', margin: '1em'}}>
+					return <div key={`${type}-${equips}`} class='two-tone' style={{display: 'flex', margin: '1em'}}>
 						<label>
 							<Image style={{height: '22px'}} src={`../assets/${type}.png`} />
 						</label>
 						<select style={{flex: 1}} title={type} name={type} value={this.props.equipment[type]} onChange={this.onChange}>
 							<option value='0'>-- None --</option>
 							{equips.map((equip) => {
-								return <option value={equip.value}>{equip.name} (+{equip.value}{equip.unit})</option>;
+								return <option key={equip.value} value={equip.value}>{equip.name} (+{equip.value}{equip.unit})</option>;
 							})}
 						</select>
 					</div>;

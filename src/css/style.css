@@ -1,3 +1,7 @@
+:root {
+	--accent: #BDB9A2;
+}
+
 html, body {
 	/* font: 14px/1.21 'Helvetica Neue', arial, sans-serif; */
 	margin: 0;
@@ -128,30 +132,6 @@ body > div > footer {
 .two-tone button,
 .two-tone select {
 	margin: auto 0;
-}
-
-.options {
-	position: sticky;
-	display: flex;
-	top: 0;
-	justify-content: center;
-	padding: 8px 0;
-	border-bottom: 2px solid #BDB9A2;
-	/* background: linear-gradient(to bottom, #36393f 80%, rgba(0 0 0 / 0)); */
-	background: #36393F;
-	z-index: 1;
-}
-
-.options > div {
-	margin: 8px 4px;
-}
-
-.options .input {
-	display: flex;
-	padding: 0 10px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-	background: #40444B;
 }
 
 .mention {

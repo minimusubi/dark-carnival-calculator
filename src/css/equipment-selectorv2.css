@@ -1,0 +1,119 @@
+.equipmentv2 {
+	/* --equipment-height: 113px; */
+	
+	position: relative;
+	top: -2px;
+	height: 0;
+	margin-bottom: 1.5em;
+	border-bottom: 2px solid var(--accent);
+	background: #202225;
+	transition: left 250ms, opacity 250ms;
+	/* z-index: 2; */
+}
+
+.equipmentv2 > .container {
+	padding: 1em 0;
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.equipmentv2.open {
+    height: auto;
+	box-shadow: 0 0 8px 4px rgb(0 0 0 / 35%);
+}
+
+.equipmentv2 > .container > .content {
+	width: 100%;
+	height: 100%;
+	/* opacity: 0; */
+	overflow: auto;
+	transition: opacity 250ms;
+}
+
+.equipmentv2.open > div > div {
+	opacity: 1;
+}
+
+/* .equipmentv2 > button > span {
+	font-family: 'Material Icons Round';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+} */
+
+.equipmentv2 > .container > .toggle {
+	position: absolute;
+	bottom: -1.25em;
+	display: flex;
+    width: 100%;
+	pointer-events: none;
+}
+
+.equipmentv2 > .container > .toggle > button {
+	content: '';
+	display: flex;
+	height: 2.5em;
+	/* margin: calc(var(--equipment-height) - 1.5em) auto 0; */
+	margin: 0 auto;
+	padding: 0 0.375rem;
+	border: 2px solid var(--accent);
+    border-radius: 100vmax;
+	outline: none;
+    background: #202225;
+	color: #FFF;
+	font-size: 0.875rem;
+	cursor: pointer;
+	z-index: 1;
+	pointer-events: all;
+}
+
+.equipmentv2 > .container > .toggle > button span {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.equipmentv2 > .container > .toggle > button > .label {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+.equipmentv2 > .container > .toggle > button > .material-icons-round {
+	font-size: 18px;
+}
+
+.equipmentv2 h1 {
+	font-size: 1.35rem;
+	font-weight: normal;
+}
+
+.information {
+	display: flex;
+	margin: 1em;
+	font-size: 15px;
+	/* Prevent margin collapse */
+	overflow: auto;
+}
+
+.information .content {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 1em;
+	border-radius: 3px;
+	background: #393C43;
+}
+
+.information p,
+.information h1 {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-align: center;
+}

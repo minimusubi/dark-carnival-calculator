@@ -1,14 +1,14 @@
 .options {
-	position: sticky;
+	/* position: sticky; */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	top: 0;
+	/* top: 0; */
 	padding: 8px 0;
 	border-bottom: 2px solid var(--accent);
 	/* background: linear-gradient(to bottom, #36393f 80%, rgba(0 0 0 / 0)); */
 	background: #36393F;
-	z-index: 1;
+	/* z-index: 1; */
 }
 
 .options > div {

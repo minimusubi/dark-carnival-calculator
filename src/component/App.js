@@ -342,8 +342,10 @@ export default class App extends Component {
 						Special thanks to <span class='mention'>@Senerio</span> for his untold hours planning, creating, and improving the Dark Carnival!
 					</p>
 				</Dialog>
-				<StatusOptions options={this.state.options} onChange={this.onOptionChange} />
-				<EquipmentSelector equipment={this.state.equipment} onChange={this.onEquipmentChange} />
+				<div class='sticky'>
+					<StatusOptions options={this.state.options} onChange={this.onOptionChange} />
+					<EquipmentSelector options={this.state.options} equipment={this.state.equipment} onChange={this.onEquipmentChange} />
+				</div>
 				<main>
 					{stalls.map((category) => {
 						const categoryStalls = category.stalls.map((stall) => {
@@ -352,7 +354,9 @@ export default class App extends Component {
 								return null;
 							}
 							
-							return <Stall key={stall.name} trueLuck={this.state.computedLuck} totalLuck={this.state.options.totalLuck} options={this.state.options} data={stall} />;
+							const stallOptions = {...category.options, ...stall.options};
+							
+							return <Stall key={stall.name} trueLuck={this.state.computedLuck} totalLuck={this.state.options.totalLuck} stats={this.state.options} data={stall} options={stallOptions} />;
 						}).filter((stall) => {
 							return stall !== null;
 						});
@@ -363,7 +367,7 @@ export default class App extends Component {
 						
 						return <div key={category.category} class='category'>
 							<h1>{category.category}</h1>
-							<div class='stalls' style={category.background ? {'--stall-background': category.background} : undefined}>
+							<div class='stalls'>
 								{categoryStalls}
 							</div>
 						</div>;

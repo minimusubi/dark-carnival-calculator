@@ -2,6 +2,10 @@
 	{
 		"category": "High Roller's Gambit",
 		"required": 75,
+		"options": {
+			"background": "#1C133E",
+			"noEffect": ["storming"]
+		},
 		"background": "#1C133E",
 		"stalls": [
 			{
@@ -112,7 +116,7 @@
 				"name": "Acidic Dunk Tank",
 				"base": -25,
 				"outcomes": [
-					"Acid Bath",
+					{"value": 1, "type": "Acid Bath", "counter": false},
 					"+1 Acid",
 					"+1 Lose Consumable",
 					{"value": 1, "type": "Gain Item"},
@@ -145,6 +149,9 @@
 				"name": "House of Mirrors",
 				"base": 55,
 				"type": "fixed",
+				"options": {
+					"noEffect": ["storming"]
+				},
 				"outcomes": [
 					"Entangle",
 					"Entangle",
@@ -214,6 +221,9 @@
 				"name": "Wicked Wishing Well (Lucky)",
 				"base": 55,
 				"type": "fixed",
+				"options": {
+					"noEffect": ["storming"]
+				},
 				"cost": {"value": 1, "type": "Lucky Coin"},
 				"outcomes": [
 					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},
@@ -227,6 +237,9 @@
 				"name": "Wicked Wishing Well",
 				"base": 50,
 				"type": "fixed",
+				"options": {
+					"noEffect": ["storming"]
+				},
 				"cost": null,
 				"outcomes": [
 					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},

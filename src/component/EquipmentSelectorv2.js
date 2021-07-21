@@ -33,10 +33,16 @@ export default class EquipmentSelectorv2 extends Component {
 	};
 	
 	render() {
+		const equipmentLuck = Object.values(this.props.equipment).reduce((accumulator, currentValue) => {
+			return accumulator + currentValue;
+		});
+		
 		return <div class={`equipmentv2${this.state.shown ? ' open' : ''}`}>
 			<div class='container'>
 				<div class='content'>
-					<a style={{display: 'block', textAlign: 'center'}} href='#' onClick={this.toggleExplanation}>Why does my equipment matter?</a>
+					<div>
+						<a href='#' onClick={this.toggleExplanation}>Why does my equipment matter?</a>
+					</div>
 					<div style={{display: this.state.explanationShown ? '' : 'none'}} class='information'>
 						<div class='content'>
 							<p>
@@ -52,11 +58,11 @@ export default class EquipmentSelectorv2 extends Component {
 							</p>
 						</div>
 					</div>
-					<div style='display: flex; flex-wrap: wrap; justify-content: center;'>
+					<div style='display: flex; flex-wrap: wrap; justify-content: center; margin: 0.5em 0;'>
 						{Object.entries(equipment).filter(([type]) => {
 							return type != 'lute' && type != 'pipe';
 						}).map(([type, equips]) => {
-							return <div key={`${type}-${equips}`} class='two-tone' style={{display: 'inline-flex', margin: '1em'}}>
+							return <div key={`${type}-${equips}`} class='two-tone' style={{display: 'inline-flex', margin: '0.5em'}}>
 								<label>
 									<Image style={{height: '22px'}} src={`../assets/${type}.png`} />
 								</label>
@@ -68,6 +74,9 @@ export default class EquipmentSelectorv2 extends Component {
 								</select>
 							</div>;
 						})}
+					</div>
+					<div class='content'>
+						<span style={{marginRight: '1em'}}>Base luck: {this.props.options.totalLuck - equipmentLuck}</span><span>Equipment luck: {equipmentLuck}</span>
 					</div>
 				</div>
 				<div class='toggle'>

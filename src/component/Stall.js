@@ -14,6 +14,7 @@ const Probability = {
 	// https://discord.com/channels/283779835883683841/805198723234660362/830909853685383231
 	DISTRACT: 0.15
 };
+const MAX_STALL_LUCK = 95;
 
 export default class Stall extends Component {
 	// constructor() {
@@ -99,24 +100,24 @@ export default class Stall extends Component {
 		}
 		
 		// Round luck to the nearest whole
-		let trueLuck = this.round(Math.min(100, Math.max(1, this.props.trueLuck + this.props.data.base)));
+		let trueLuck = this.round(Math.min(MAX_STALL_LUCK, Math.max(1, this.props.trueLuck + this.props.data.base)));
 		if (this.props.data.type === 'fixed') {
 			trueLuck = this.props.data.base;
 		}
 		let eligibleSlots = this.props.data.outcomes.length - 1;
 		
-		if (this.props.options.shocked) {
+		if (this.props.stats.shocked) {
 			eligibleSlots -= 1;
 		}
 		
 		// Scare
-		if (this.props.options.scared) {
+		if (this.props.stats.scared) {
 			outcomes.push(this.createOutcome(<img src='../assets/scare.png' />, Probability.SCARE, 'Get scared and flee'));
 		}
 		
 		// Storm
-		if (this.props.options.storming) {
-			trueLuck = Math.min(100, Math.max(1, trueLuck + 10));
+		if (this.props.stats.storming && !this.props.options.noEffect?.includes('storming')) {
+			trueLuck = Math.min(MAX_STALL_LUCK, Math.max(1, trueLuck + 10));
 		}
 		
 		for (let i = this.props.data.outcomes.length - 1; i >= 0; i--) {
@@ -132,7 +133,7 @@ export default class Stall extends Component {
 			 * And then basically the probability overall of that outcome is 1 OR (2 AND 3).
 			 * In order to come out with 3/4, you either a) naturally roll a 3/4, or b) roll a 2/4 and get saved by an encourage
 			*/
-			if (this.props.options.encouraged) {
+			if (this.props.stats.encouraged) {
 				/* let encourageProbability = 0;
 				for (let j = 0; j < i; j++) {
 					console.log('prob of exactly', j, 'encourage rolls out of', i, this.getProbability(i, j, ENCOURAGE_PROBABILITY));
@@ -153,7 +154,7 @@ export default class Stall extends Component {
 			}
 			
 			// Droll Distraction
-			if (this.props.options.drollDistracted) {
+			if (this.props.stats.drollDistracted) {
 				// Binomial + the probability of the row above moving down - probability of the current row getting moved down
 				probability = probability
 					+ (i == eligibleSlots ? 0 : this.getProbability(i + 1, 1, Probability.DROLL_DISTRACT) * this.getProbability(eligibleSlots, i + 1, trueLuck / 100))
@@ -161,7 +162,7 @@ export default class Stall extends Component {
 			}
 			
 			// Storm
-			if (this.props.options.storming) {
+			if (this.props.stats.storming && !this.props.options.noEffect?.includes('storming')) {
 				// Binomial + the probability of the row above moving down - probability of the current row getting moved down
 				probability = probability
 					+ (i == eligibleSlots ? 0 : this.getProbability(i + 1, 1, Probability.STORM) * this.getProbability(eligibleSlots, i + 1, trueLuck / 100))
@@ -175,7 +176,7 @@ export default class Stall extends Component {
 			
 			// Scare, which has a 50% chance of avoiding the outcome
 			// https://discord.com/channels/283779835883683841/805198723234660362/807484940701663273
-			if (this.props.options.scared) {
+			if (this.props.stats.scared) {
 				probability *= Probability.SCARE;
 			}
 			
@@ -189,7 +190,7 @@ export default class Stall extends Component {
 				
 				if (outcome.type == 'Gold') {
 					// Apply the gold multiplier only to positive gold outcomes
-					value = outcome.value + this.round((outcome.value > 0 ? this.props.options.goldMultiplier : 0) / 100 * outcome.value);
+					value = outcome.value + this.round((outcome.value > 0 ? this.props.stats.goldMultiplier : 0) / 100 * outcome.value);
 				}
 				
 				averages.get(outcome.type).values.push(value * probability);
@@ -207,7 +208,7 @@ export default class Stall extends Component {
 		}
 		let costImage = cost.type ? <Image src={`../assets/${cost.type.toLowerCase().replace(/\s+/g, '-')}.png`} /> : null;
 		
-		return <div class='stall' style={this.props.data.background ? {'--stall-background': this.props.data.background} : undefined}>
+		return <div class='stall' style={this.props.options.background ? {'--stall-background': this.props.options.background} : undefined}>
 			<div class='container'>
 				<div class='title'>
 					<div>{this.props.data.name}</div>
@@ -228,17 +229,23 @@ export default class Stall extends Component {
 					});
 					
 					if (average === 0) {
-						return;
-					} else if (average < 1) {
-						// Calculate average tickets per one item
 						return <div key={type} style={{marginBottom: '8px', fontSize: '16px', textAlign: 'center'}}>
-							Average plays per {(statLabel ?? type).toLowerCase()} is {this.round(1 / average * 100) / 100}
+							No {(statLabel ?? type).toLowerCase()} change on average
 						</div>;
+					} else if (average < 1) {
+						const playsPerItem = this.round(1 / average * 100) / 100;
+						
+						if (playsPerItem >= 1) {
+							// Calculate average tickets per one item
+							return <div key={type} style={{marginBottom: '8px', fontSize: '16px', textAlign: 'center'}}>
+								{playsPerItem} plays per {(statLabel ?? type).toLowerCase()} on average
+							</div>;
+						}
 					}
 					
 					// Calculate average items per one ticket
 					return <div key={type} style={{marginBottom: '8px', fontSize: '16px', textAlign: 'center'}}>
-						Average {(statLabel ?? type).toLowerCase()} per play is {this.round(average * 100) / 100}
+						{this.round(average * 100) / 100} {(statLabel ?? type).toLowerCase()} per play on average
 					</div>;
 				})}
 				<div style={{fontSize: '12px', fontWeight: 400, textAlign: 'center', color: '#939286'}}>

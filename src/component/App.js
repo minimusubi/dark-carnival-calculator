@@ -321,7 +321,7 @@ export default class App extends Component {
 			<div onpaste={this.onPaste}>
 				<Dialog style={{maxWidth: '53em'}} title='Calculator Usage' open={this.state.isIntroOpen === true} onDismiss={this.onDismissIntro} leftActions={<a href='#' onClick={this.onIgnoreIntro}>Don't show again</a>}>
 					<p>
-						To start, simply enter your stats, including your <Image class='inline' src='../assets/luck.png' /> luck and <Image class='inline' src='../assets/gold-multiplier.png' /> gold multiplier. Enter these just as they appear in your <code>$profile</code>. Finally, use the equipment sidebar, accessible via the <Image class='inline' src='../assets/armor.png' /> icon in the top left, to set the items that you currently have equipped.
+						To start, simply enter your stats, including your <Image class='inline' src='../assets/luck.png' /> luck and <Image class='inline' src='../assets/gold-multiplier.png' /> gold multiplier. Enter these just as they appear in your <code>$profile</code>. Finally, use the equipment menu to select the items that you currently have equipped.
 					</p>
 					<h1 style={{textAlign: 'left', fontSize: '1.75rem', fontWeight: 'normal'}}>Import via Paste!</h1>
 					<p>

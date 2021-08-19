@@ -43,7 +43,7 @@
 			},
 			{
 				"name": "A Wager with Chaos",
-				"base": -30,
+				"base": -35,
 				"outcomes": [
 					"Death",
 					"?????",
@@ -166,6 +166,20 @@
 		"category": "Encounters",
 		"stalls": [
 			{
+				"name": "Hildebrant's Cellar",
+				"base": 95,
+				"type": "fixed",
+				"cost": {"value": 1, "type": "Lockpick"},
+				"outcomes": [
+					"Death",
+					"+0 Rooms",
+					{"value": 1, "type": "Rooms"},
+					{"value": 2, "type": "Rooms"},
+					{"value": 3, "type": "Rooms"}
+				],
+				"details": "Chance decreases by 4% each time it is played."
+			},
+			{
 				"name": "Drinking Contest",
 				"base": 80,
 				"type": "fixed",
@@ -176,7 +190,8 @@
 					"+1 Confuse",
 					{"value": 100, "type": "Gold"},
 					{"value": 300, "type": "Gold"}
-				]
+				],
+				"details": "Chance decreases by 10% each time it is played."
 			},
 			{
 				"name": "Embedded Hammer",

@@ -16,7 +16,7 @@
 					"+3 Frozen",
 					"+2 Frozen",
 					"+1 Wet",
-					"Gambit Advance"
+					{"value": 1, "type": "Gambit Advance", "counter": false}
 				]
 			},
 			{
@@ -27,7 +27,7 @@
 					"+2 Confuse",
 					"+3 Burn",
 					"+2 Burn",
-					"Gambit Advance"
+					{"value": 1, "type": "Gambit Advance", "counter": false}
 				]
 			},
 			{
@@ -38,7 +38,7 @@
 					"+3 Shock",
 					"+2 Shock",
 					"+1 Scare",
-					"Gambit Advance"
+					{"value": 1, "type": "Gambit Advance", "counter": false}
 				]
 			},
 			{
@@ -125,25 +125,15 @@
 			},
 			{
 				"name": "Cursed Dice",
-				"base": 15,
-				"outcomes": [
-					"+1 Curse",
-					"+1 Droll Distraction",
-					"+1 Poison",
-					{"value": 1, "type": "+5% Gold Multiplier for 1 Day", "statLabel": "5% gold multiplier", "counter": false},
-					{"value": 1, "type": "+10% Gold Multiplier for 1 Day", "statLabel": "10% gold multiplier", "counter": false}
-				]
-			},
-			{
-				"name": "Prayer to RNGesus",
-				"base": 30,
+				"base": 20,
 				"outcomes": [
 					"Nothing",
-					{"value": 1, "type": "Life"},
-					{"value": 2, "type": "Life"},
-					{"value": 1, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"},
-					{"value": 2, "type": "Luck Blessing for 1 Day", "statLabel": "luck blessing"}
-				]
+					"Nothing",
+					{"value": 1, "type": "Blessing", "counter": false},
+					{"value": 1, "type": "Blessing", "counter": false},
+					"+1 Curse"
+				],
+				"details": "Provides a random selection of the following: 5% Gold Multiplier, 10% Gold Multiplier, +1 Luck Blessing, +2 Luck Blessing."
 			},
 			{
 				"name": "House of Mirrors",

@@ -2,10 +2,10 @@
 	--primary-dark: #59475F;
 	--primary-light: #7A5480;
 	--link: #C889DE;
-	--outline: rgb(217 249 165);
+	--outline: rgb(185 230 255);
 	--accent-raw: 189 185 162;
 	--accent: rgb(var(--accent-raw));
-	--mention-raw: 232 215 165;
+	--mention-raw: 255 169 163;
 	--mention: rgb(var(--mention-raw));
 	/* --accent: #BDB9A2; */
 }

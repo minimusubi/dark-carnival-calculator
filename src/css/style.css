@@ -1,5 +1,13 @@
 :root {
-	--accent: #BDB9A2;
+	--primary-dark: #59475F;
+	--primary-light: #7A5480;
+	--link: #C889DE;
+	--outline: rgb(217 249 165);
+	--accent-raw: 189 185 162;
+	--accent: rgb(var(--accent-raw));
+	--mention-raw: 232 215 165;
+	--mention: rgb(var(--mention-raw));
+	/* --accent: #BDB9A2; */
 }
 
 html, body {
@@ -28,7 +36,7 @@ h1 {
 }
 
 a {
-	color: #C889DE;
+	color: var(--link);
 	text-decoration: none;
 }
 
@@ -46,7 +54,7 @@ input:focus,
 button:focus,
 select:focus {
 	outline: none;
-	box-shadow: 0 0 0 3px #c3cc6d;
+	box-shadow: 0 0 0 3px var(--outline);
 }
 
 input:disabled,
@@ -146,8 +154,8 @@ body > div > footer {
     border-radius: 3px;
 	/* background: #4b3630; */
     /* color: #E8D7A5; */
-	background: rgb(232 215 165 / 0.1);
-    color: rgb(232 215 165);
+	background: rgb(var(--mention-raw) / 0.1);
+    color: var(--mention);
 }
 
 footer > div {

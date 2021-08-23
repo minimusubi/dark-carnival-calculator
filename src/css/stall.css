@@ -27,7 +27,7 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	padding: 18px 0 8px; 
+	padding: 18px 0 4px;
 	border: 2px solid var(--accent);
 }
 
@@ -41,7 +41,7 @@
 	left: 50%;
 	min-width: 226px;
 	height: var(--end-cap-height);
-	background: #59475F;
+	background: var(--primary-dark);
 	font-family: 'Kingthings Petrock';
 	font-size: 28px;
 	font-weight: bold;
@@ -54,7 +54,7 @@
 	position: absolute;
 	left: calc(-1 * var(--end-cap-width));
 	border-top: calc(var(--end-cap-height) / 2) solid transparent;
-	border-right: var(--end-cap-width) solid #59475F;
+	border-right: var(--end-cap-width) solid var(--primary-dark);
 	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
 }
 
@@ -64,7 +64,7 @@
 	right: calc(-1 * var(--end-cap-width));
 	border-top: calc(var(--end-cap-height) / 2) solid transparent;
 	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
-	border-left: var(--end-cap-width) solid #59475F;
+	border-left: var(--end-cap-width) solid var(--primary-dark);
 }
 
 .stall .title div {
@@ -85,7 +85,7 @@
 	padding-left: 10px;
 	border-top-left-radius: 14px;
 	border-bottom-left-radius: 14px;
-	background: #59475F;
+	background: var(--primary-dark);
 	font-size: 16px;
 }
 
@@ -129,10 +129,16 @@
 	height: 75%;
 }
 
+.stall .divider {
+    margin-bottom: 4px;
+	height: 1px;
+    background: linear-gradient(90deg, rgb(0 0 0 / 0) 5%, rgba(var(--accent-raw) / 0.8) 20%, rgba(var(--accent-raw) / 0.8) 80%, rgba(0 0 0 / 0) 95%);
+}
+
 .sign {
 	--sign-cap-width: 14px;
 	--sign-cap-height: 36px;
-	--sign-background: #59475F;
+	--sign-background: var(--primary-dark);
 	
 	position: relative;
 	display: flex;
@@ -183,7 +189,7 @@
 	width: calc(var(--end-cap-width) * 2);
 	height: var(--end-cap-height);
 	margin: 0 calc(var(--end-cap-width) + 8px) 0 var(--end-cap-width);
-	background: #7A5480;
+	background: var(--primary-light);
 	color: #FFF;
 	font-size: 28px;
 	font-weight: 700;
@@ -195,7 +201,7 @@
 	position: absolute;
 	left: calc(-1 * var(--end-cap-width));
 	border-top: calc(var(--end-cap-height) / 2) solid transparent;
-	border-right: var(--end-cap-width) solid #7A5480;
+	border-right: var(--end-cap-width) solid var(--primary-light);
 	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
 }
 
@@ -205,5 +211,5 @@
 	right: calc(-1 * var(--end-cap-width));
 	border-top: calc(var(--end-cap-height) / 2) solid transparent;
 	border-bottom: calc(var(--end-cap-height) / 2) solid transparent;
-	border-left: var(--end-cap-width) solid #7A5480;
+	border-left: var(--end-cap-width) solid var(--primary-light);
 }

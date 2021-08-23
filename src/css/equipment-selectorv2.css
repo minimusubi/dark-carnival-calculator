@@ -29,7 +29,6 @@
 	width: 100%;
 	height: 100%;
 	/* opacity: 0; */
-	overflow: auto;
 	transition: opacity 250ms;
 }
 

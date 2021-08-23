@@ -221,6 +221,7 @@ export default class Stall extends Component {
 					{outcomes}
 				</div>
 				<div style={{flex: 1}} />
+				<div class='divider' />
 				{Array.from(averages).filter(([, {values}]) => {
 					return values.length > 0;
 				}).map(([type, {values, statLabel}]) => {

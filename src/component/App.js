@@ -12,7 +12,7 @@ import equipment from '../equipment.json';
 import stalls from '../stalls.json';
 
 const EQUIPMENT_REVISION = 1;
-const INTRO_DIALOG_VERSION = '7';
+const INTRO_DIALOG_VERSION = '8';
 
 export default class App extends Component {
 	constructor() {
@@ -321,25 +321,22 @@ export default class App extends Component {
 			<div onpaste={this.onPaste}>
 				<Dialog style={{maxWidth: '53em'}} title='Calculator Usage' open={this.state.isIntroOpen === true} onDismiss={this.onDismissIntro} leftActions={<a href='#' onClick={this.onIgnoreIntro}>Don't show again</a>}>
 					<p>
-						To start, simply enter your stats, including your <Image class='inline' src='../assets/luck.png' /> luck and <Image class='inline' src='../assets/gold-multiplier.png' /> gold multiplier. Enter these just as they appear in your <code>$profile</code>. Finally, use the equipment menu to select the items that you currently have equipped.
-					</p>
-					<h1 style={{textAlign: 'left', fontSize: '1.75rem', fontWeight: 'normal'}}>Import via Paste!</h1>
-					<p>
-						You can now import your stats by copy/pasting your profile from Discord! Click the image to open it full-size.
+						Simply copy/paste your entire <code>$profile</code> from Discord! See the image for demonstration, and click it to open full-size.
 						<div><a href='../assets/copy-paste.mp4' target='_blank'><Image style={{width: '50%'}} src='../assets/copy-paste.gif' /></a></div>
 					</p>
-					<h1 style={{textAlign: 'left', fontSize: '1.75rem', fontWeight: 'normal'}}>Thanks</h1>
+					<h1 style={{textAlign: 'left', fontSize: '1.75rem', fontWeight: 'normal'}}>Thanks to</h1>
 					<p>
 						<ul>
-							<li><span class='mention'>@goose</span> for the inspiration</li>
-							<li><span class='mention'>@alifee</span> for calculation and simulation assistance</li>
-							<li><span class='mention'>@peace</span> for providing encourage calculations</li>
-							<li><span class='mention'>@Robby</span> for helping to correct and verify calculations</li>
+							<li><span class='mention'>@goose</span> inspiration</li>
+							<li><span class='mention'>@alifee</span> calculation and simulation assistance</li>
+							<li><span class='mention'>@peace</span> providing encourage calculations</li>
+							<li><span class='mention'>@Robby</span> correcting and verifying calculations</li>
+							<li><span class='mention'>@Gcon03</span> continuously helping keep this up to date</li>
 							<li>Everyone else who has made suggestions or reports</li>
 						</ul>
 					</p>
 					<p>
-						Special thanks to <span class='mention'>@Senerio</span> for his untold hours planning, creating, and improving the Dark Carnival!
+						This calculator wouldn't exist without <span class='mention'>@Senerio</span>, who spent untold hours planning, creating, and improving the Dark Carnival!
 					</p>
 				</Dialog>
 				<div class='sticky'>

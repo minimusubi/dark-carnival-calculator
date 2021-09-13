@@ -139,6 +139,10 @@
 	],
 	"amulet": [
 		{
+			"name": "Tuft of White Hair",
+			"value": 3
+		},
+		{
 			"name": "Fancy Ruff",
 			"value": 4
 		},

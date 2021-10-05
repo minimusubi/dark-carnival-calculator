@@ -83,7 +83,7 @@ export default class StatusOptions extends Component {
 					<label>
 						<Image src='../assets/luck.png' />
 					</label>
-					<input style={{width: '48px'}} name='totalLuck' min='1' max='95' type='number' value={this.props.options.totalLuck} onInput={this.onInput} onKeydown={this.onKeydown} />
+					<input style={{width: '48px'}} name='totalLuck' type='number' value={this.props.options.totalLuck} onInput={this.onInput} onKeydown={this.onKeydown} />
 				</div>
 			</Hint>
 			<Hint content={<span>Enter the <span style={{fontStyle: 'italic'}}>total</span> gold multiplier, as shown on your profile</span>}>

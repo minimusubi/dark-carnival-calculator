@@ -91,7 +91,7 @@ export default class StatusOptions extends Component {
 					<label>
 						<Image src='../assets/gold-multiplier.png' />
 					</label>
-					<input style={{width: '48px'}} name='goldMultiplier' min='-50' max='30' data-type='number' data-postfix='%' value={`${this.props.options.goldMultiplier}%`} onInput={this.onInput} onKeydown={this.onKeydown} />
+					<input style={{width: '48px'}} name='goldMultiplier' min='-50' max='38' data-type='number' data-postfix='%' value={`${this.props.options.goldMultiplier}%`} onInput={this.onInput} onKeydown={this.onKeydown} />
 				</div>
 			</Hint>
 			<Hint content={<span>Enable if you are encouraged <span style={{fontStyle: 'italic'}}>(unverified accuracy)</span></span>}>

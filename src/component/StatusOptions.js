@@ -21,7 +21,7 @@ export default class StatusOptions extends Component {
 	};
 	
 	clampNumber = (input, value) => {
-		return Math.max(input.min !== undefined ? parseInt(input.min, 10) : -Infinity, Math.min(input.max !== undefined ? parseInt(input.max, 10) : Infinity, value));
+		return Math.max(input.min?.length > 0 ? parseInt(input.min, 10) : -Infinity, Math.min(input.max?.length > 0 ? parseInt(input.max, 10) : Infinity, value));
 	};
 	
 	onInput = (event) => {

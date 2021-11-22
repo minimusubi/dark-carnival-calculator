@@ -306,14 +306,16 @@ export default class App extends Component {
 	};
 	
 	getComputedLuck(options, equips) {
-		// Total the luck from equipment
-		let equipmentLuck = Object.entries(equips).reduce((accumulator, [, luck]) => {
+		// Total luck from equipment
+		const equipmentLuck = Object.entries(equips).reduce((accumulator, [, luck]) => {
 			return accumulator + luck;
 		}, 0);
+		const trueLuck = options.totalLuck - equipmentLuck;
+		// Apply equipment luck conversion
+		// https://discord.com/channels/283779835883683841/805198723234660362/911774788534534154
+		const trueEquipmentLuck = Math.round(equipmentLuck * (1 - equipmentLuck / (equipmentLuck + 45 + Math.min(equipmentLuck * 1.3, 65))));
 		
-		// Only apply 70% of equipment luck
-		// Clamp luck to [1, 95]
-		return Math.max(1, Math.min(95, options.totalLuck - Math.floor(equipmentLuck * 0.3)));
+		return trueLuck + trueEquipmentLuck;
 	}
 	
 	render() {

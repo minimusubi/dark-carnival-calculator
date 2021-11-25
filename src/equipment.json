@@ -262,6 +262,10 @@
 		},
 		{
 			"name": "Luck Blessing",
+			"value": 4
+		},
+		{
+			"name": "Luck Blessing",
 			"value": 5
 		}
 	]

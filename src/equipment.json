@@ -43,6 +43,10 @@
 		{
 			"name": "Princess Hat",
 			"value": 12
+		},
+		{
+			"name": "Volcano Hat",
+			"value": 16
 		}
 	],
 	"armor": [
@@ -84,6 +88,10 @@
 		},
 		{
 			"name": "Bandit King's Fur Mantle",
+			"value": 10
+		},
+		{
+			"name": "Disciple Robe",
 			"value": 10
 		},
 		{
@@ -161,6 +169,10 @@
 		{
 			"name": "Magic Dreamcatcher",
 			"value": 12
+		},
+		{
+			"name": "Fraybee's Pendant",
+			"value": 13
 		},
 		{
 			"name": "White Cat",

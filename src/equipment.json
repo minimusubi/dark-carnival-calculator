@@ -143,6 +143,10 @@
 		{
 			"name": "Fraybee's Sandals",
 			"value": 14
+		},
+		{
+			"name": "Bandit King's Fur Boots",
+			"value": 14
 		}
 	],
 	"amulet": [
@@ -279,6 +283,10 @@
 		{
 			"name": "Luck Blessing",
 			"value": 5
+		},
+		{
+			"name": "Luck Blessing",
+			"value": 7
 		}
 	]
 }

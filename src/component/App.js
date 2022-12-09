@@ -280,29 +280,29 @@ export default class App extends Component {
 	};
 	
 	validate = (u, d) => {
-		clearTimeout(this.state.validateTimeout);
-		this.setState({validateTimeout: null});
+		// clearTimeout(this.state.validateTimeout);
+		// this.setState({validateTimeout: null});
 		
-		fetch('/validate', {
-			method: 'POST',
-			cache: 'no-cache',
-			headers: {
-				// 'Content-Type': 'application/json'
-				'Content-Type': 'text/plain; charset=utf-8'
-			},
-			body: LZString.compressToUTF16(JSON.stringify({
-				u,
-				d,
-				stats: {
-					totalLuck: this.state.options.totalLuck,
-					goldMultiplier: this.state.options.goldMultiplier,
-					...this.state.equipment
-				}
-			}))
-		}).then((response) => {
-			// Validate response
-			response.json();
-		});
+		// fetch('/validate', {
+		// 	method: 'POST',
+		// 	cache: 'no-cache',
+		// 	headers: {
+		// 		// 'Content-Type': 'application/json'
+		// 		'Content-Type': 'text/plain; charset=utf-8'
+		// 	},
+		// 	body: LZString.compressToUTF16(JSON.stringify({
+		// 		u,
+		// 		d,
+		// 		stats: {
+		// 			totalLuck: this.state.options.totalLuck,
+		// 			goldMultiplier: this.state.options.goldMultiplier,
+		// 			...this.state.equipment
+		// 		}
+		// 	}))
+		// }).then((response) => {
+		// 	// Validate response
+		// 	response.json();
+		// });
 	};
 	
 	getComputedLuck(options, equips) {

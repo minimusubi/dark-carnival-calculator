@@ -1,6 +1,6 @@
 import {Component, createRef} from 'preact';
 
-import '../css/Modal.css';
+import '../css/modal.css';
 
 export default class Modal extends Component {
 	overlayRef = createRef();

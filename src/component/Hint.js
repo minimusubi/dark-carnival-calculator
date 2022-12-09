@@ -1,6 +1,6 @@
 import {Component} from 'preact';
 
-import '../css/Hint.css';
+import '../css/hint.css';
 
 export default class Hint extends Component {
 	constructor() {

@@ -16,16 +16,16 @@
     "build/*"
   ],
   "devDependencies": {
-    "@babel/eslint-parser": "^7.14.3",
-    "@babel/eslint-plugin": "^7.13.16",
-    "eslint": "^7.27.0",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/eslint-plugin": "^7.19.1",
+    "eslint": "^8.29.0",
     "eslint-config-preact": "^1.1.4",
-    "preact-cli": "^3.2.0",
-    "sirv-cli": "^1.0.12"
+    "preact-cli": "^3.4.1",
+    "sirv-cli": "^2.0.2"
   },
   "dependencies": {
     "lz-string": "^1.4.4",
-    "preact": "^10.5.13",
-    "preact-render-to-string": "^5.1.19"
+    "preact": "^10.11.3",
+    "preact-render-to-string": "^5.2.6"
   }
 }

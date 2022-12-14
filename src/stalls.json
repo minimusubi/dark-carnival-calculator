@@ -134,21 +134,6 @@
 					"+1 Curse"
 				],
 				"details": "Provides a random selection of the following: 5% Gold Multiplier, 10% Gold Multiplier, +1 Luck Blessing, +2 Luck Blessing."
-			},
-			{
-				"name": "House of Mirrors",
-				"base": 55,
-				"type": "fixed",
-				"options": {
-					"noEffect": ["storming"]
-				},
-				"outcomes": [
-					"Entangle",
-					"Entangle",
-					"Entangle",
-					"Nothing",
-					{"value": 1, "type": "Toy Hammer"}
-				]
 			}
 		]
 	},
@@ -161,13 +146,90 @@
 				"type": "fixed",
 				"cost": {"value": 1, "type": "Lockpick"},
 				"outcomes": [
-					"Death",
-					"+0 Rooms",
-					{"value": 1, "type": "Rooms"},
-					{"value": 2, "type": "Rooms"},
-					{"value": 3, "type": "Rooms"}
+					"+3 Damage",
+					"+2 Damage",
+					"+1 Damage",
+					{"value": 1, "type": "Room"},
+					{"value": 1, "type": "Room"}
 				],
 				"details": "Chance decreases by 4% each time it is played."
+			},
+			{
+				"name": "Stone Hero",
+				"base": 95,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute"
+				]
+			},
+			{
+				"name": "Bronze Hero",
+				"base": 95,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute"
+				]
+			},
+			{
+				"name": "Silver Hero",
+				"base": 95,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute"
+				]
+			},
+			{
+				"name": "Golden Hero",
+				"base": 95,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute",
+					"Tribute"
+				]
+			},
+			{
+				"name": "Dark Cave",
+				"base": 80,
+				"type": "fixed",
+				"cost": null,
+				"outcomes": [
+					"+8 Damage",
+					"+6 Damage",
+					"+4 Damage",
+					"+2 Damage",
+					"+1 Room"
+				]
 			},
 			{
 				"name": "Drinking Contest",
@@ -197,6 +259,32 @@
 				]
 			},
 			{
+				"name": "Goblin Shaman",
+				"base": 70,
+				"type": "fixed",
+				"cost": {"value": 1, "type": "Lute"},
+				"outcomes": [
+					{"value": 1, "type": "Distraction Chance"},
+					{"value": 2, "type": "Distraction Chance"},
+					{"value": 3, "type": "Distraction Chance"},
+					{"value": 4, "type": "Distraction Chance"},
+					{"value": 5, "type": "Distraction Chance"}
+				]
+			},
+			{
+				"name": "Ancient Ruins",
+				"base": 65,
+				"type": "fixed",
+				"cost": null,
+				"outcomes": [
+					"?????",
+					"?????",
+					{"value": -20, "type": "XP"},
+					{"value": 20, "type": "XP"},
+					{"value": 30, "type": "XP"}
+				]
+			},
+			{
 				"name": "Field of Herbs",
 				"base": 65,
 				"type": "fixed",
@@ -204,13 +292,52 @@
 				"outcomes": [
 					"+1 Poison",
 					"Nothing",
-					"Nothing",
-					"Nothing",
 					{"value": 1, "type": "Herb"}
 				]
 			},
 			{
-				"name": "Mystery Bag",
+				"name": "Armory",
+				"base": 60,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": {"value": 5, "type": "Lockpick"},
+				"outcomes": [
+					"Nothing",
+					"Nothing",
+					"Nothing",
+					"Nothing",
+					"Toy Hammers"
+				]
+			},
+			{
+				"name": "Message In A Bottle",
+				"base": 60,
+				"type": "fixed",
+				"cost": null,
+				"outcomes": [
+					"Nothing",
+					"?????",
+					"?????",
+					"?????"
+				]
+			},
+			{
+				"name": "Shelter",
+				"base": 60,
+				"type": "fixed",
+				"cost": null,
+				"outcomes": [
+					"Nothing",
+					"Nothing",
+					"Freeze Immunity (2h)",
+					"Freeze Immunity (4h)",
+					"Freeze Immunity (6h)"
+				]
+			},
+			{
+				"name": "Devious Enchanter",
 				"base": 50,
 				"type": "fixed",
 				"cost": {"value": 2, "type": "Ticket"},
@@ -224,19 +351,20 @@
 			},
 			{
 				"name": "Wicked Wishing Well (Lucky)",
-				"base": 55,
+				"base": 75,
 				"type": "fixed",
 				"options": {
 					"noEffect": ["storming"]
 				},
-				"cost": {"value": 1, "type": "Lucky Coin"},
+				"cost": {"value": "?", "type": "Lucky Coin"},
 				"outcomes": [
 					{"value": -1, "type": "Luck", "statLabel": "bonus luck"},
 					"?????",
 					"?????",
 					"?????",
 					{"value": 1, "type": "Luck", "statLabel": "bonus luck"}
-				]
+				],
+				"details": "Cost goes up according to well luck."
 			},
 			{
 				"name": "Wicked Wishing Well",
@@ -294,6 +422,23 @@
 				]
 			},
 			{
+				"name": "Busker",
+				"base": 35,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": {"value": 100, "type": "Gold"},
+				"outcomes": [
+					{"value": 0, "type": "Encourage"},
+					{"value": 1, "type": "Encourage"},
+					{"value": 2, "type": "Encourage"},
+					{"value": 3, "type": "Encourage"},
+					{"value": 4, "type": "Encourage"}
+				],
+				"details": "Chance increases by 5% for each tip, up to five times."
+			},
+			{
 				"name": "Wandering Monk",
 				"base": 35,
 				"type": "fixed",
@@ -313,10 +458,67 @@
 				"cost": {"value": 50, "type": "Gold"},
 				"outcomes": [
 					"Nothing",
-					"Nothing",
 					"-1 Ailment",
 					"-2 Ailment",
 					"Cure Ailments"
+				]
+			},
+			{
+				"name": "Ice Idol",
+				"base": 30,
+				"type": "fixed",
+				"cost": null,
+				"outcomes": [
+					"?????",
+					"?????",
+					"?????",
+					"?????",
+					"?????"
+				]
+			},
+			{
+				"name": "Minstrel",
+				"base": 30,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"Nothing",
+					{"value": 10, "type": "XP"},
+					{"value": 20, "type": "XP"},
+					"+5% XP Multiplier (24h)",
+					"+10% XP Multiplier (24h)"
+				]
+			},
+			{
+				"name": "Stone Table",
+				"base": 13,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"?????",
+					"?????",
+					"?????",
+					"?????",
+					"?????"
+				]
+			},
+			{
+				"name": "Firesilk",
+				"base": 10,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					"?????",
+					{"value": 1, "type": "Firesilk"}
 				]
 			},
 			{

@@ -133,7 +133,7 @@ export default class Stall extends Component {
 			 * And then basically the probability overall of that outcome is 1 OR (2 AND 3).
 			 * In order to come out with 3/4, you either a) naturally roll a 3/4, or b) roll a 2/4 and get saved by an encourage
 			*/
-			if (this.props.stats.encouraged) {
+			if (this.props.stats.encouraged && !this.props.options.noEffect?.includes('encourage')) {
 				/* let encourageProbability = 0;
 				for (let j = 0; j < i; j++) {
 					console.log('prob of exactly', j, 'encourage rolls out of', i, this.getProbability(i, j, ENCOURAGE_PROBABILITY));

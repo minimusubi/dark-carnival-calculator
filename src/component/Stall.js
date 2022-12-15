@@ -217,10 +217,10 @@ export default class Stall extends Component {
 					<span>{cost.value}</span>
 					{costImage}
 				</div>
-				<div style={{margin: '14px'}}>
+				<div class='background' style={{'--stall-image': `url(/assets/stall/${this.props.data.name.toLowerCase().replaceAll(/[^a-z0-9 -]+/g, '').replaceAll(/ +/g, '-')}.png)`, flex: 1}}>
 					{outcomes}
 				</div>
-				<div style={{flex: 1}} />
+				{/* <div style={{flex: 1}} /> */}
 				<div class='divider' />
 				{Array.from(averages).filter(([, {values}]) => {
 					return values.length > 0;

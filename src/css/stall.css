@@ -47,6 +47,7 @@
 	font-weight: bold;
 	text-align: center;
 	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
 .stall .title::before {
@@ -87,6 +88,7 @@
 	border-bottom-left-radius: 14px;
 	background: var(--primary-dark);
 	font-size: 16px;
+	z-index: 1;
 }
 
 .stall .cost span {
@@ -96,6 +98,25 @@
 .stall .cost img {
 	height: 14px;
 	margin-right: 6px;
+}
+
+.stall .background {
+	position: relative;
+	padding: 14px;
+	z-index: 0;
+}
+
+.stall .background::before {
+	content: '';
+	position: absolute;
+	top: -18px;
+	left: 0;
+	height: 100%;
+	height: calc(100% + 18px);
+	width: 100%;
+	background: var(--stall-image) right bottom / cover no-repeat;
+	opacity: 0.302;
+	z-index: -1;
 }
 
 .stall .outcome {

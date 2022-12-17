@@ -8,8 +8,8 @@ import LZString from 'lz-string';
 
 import '../css/style';
 import '../css/font';
-import equipment from '../equipment.json';
-import stalls from '../stalls.json';
+import equipment from '../data/equipment.json';
+import stalls from '../data/stalls.json';
 
 const EQUIPMENT_REVISION = 1;
 const INTRO_DIALOG_VERSION = '8';

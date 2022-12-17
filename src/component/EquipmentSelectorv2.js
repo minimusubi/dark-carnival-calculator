@@ -1,7 +1,7 @@
 import {Component} from 'preact';
 import Image from './Image.js';
 import '../css/equipment-selectorv2.css';
-import equipment from '../equipment.json';
+import equipment from '../data/equipment.json';
 
 export default class EquipmentSelectorv2 extends Component {
 	constructor() {

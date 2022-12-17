@@ -37,12 +37,20 @@
 			"value": 9
 		},
 		{
+			"name": "Hangman's Hood",
+			"value": 10
+		},
+		{
 			"name": "Lucky's Hat",
 			"value": 10
 		},
 		{
 			"name": "Princess Hat",
 			"value": 12
+		},
+		{
+			"name": "Disciple Hood",
+			"value": 16
 		},
 		{
 			"name": "Volcano Hat",
@@ -97,6 +105,10 @@
 		{
 			"name": "Hangman's Garb",
 			"value": 14
+		},
+		{
+			"name": "Lucky's Garment",
+			"value": 14
 		}
 	],
 	"boots": [
@@ -135,6 +147,10 @@
 		{
 			"name": "Highroller's Boots",
 			"value": 9
+		},
+		{
+			"name": "Ancient Boots",
+			"value": 10
 		},
 		{
 			"name": "Coal Heart's Moccasins",
@@ -185,6 +201,10 @@
 	],
 	"trinket": [
 		{
+			"name": "Tuft of Black Hair",
+			"value": 2
+		},
+		{
 			"name": "Golden Feather",
 			"value": 4
 		},
@@ -232,12 +252,12 @@
 		},
 		{
 			"name": "Bone Lute",
-			"value": 12,
+			"value": 13,
 			"unit": "%"
 		},
 		{
 			"name": "Royal Lute",
-			"value": 15,
+			"value": 18,
 			"unit": "%"
 		}
 	],

@@ -41,12 +41,12 @@ export default class EquipmentSelectorv2 extends Component {
 			<div class='container'>
 				<div class='content'>
 					<div>
-						<a href='#' onClick={this.toggleExplanation}>Why does my equipment matter?</a>
+						<a href='#' onClick={this.toggleExplanation}>Why does equipment matter?</a>
 					</div>
 					<div style={{display: this.state.explanationShown ? '' : 'none'}} class='information'>
 						<div class='content'>
 							<p>
-								Calculations for "true luck" are based on two types of luck; your "base luck", and your "equipment luck".
+								Calculations for <strong>true luck</strong> are based on two types of luck; your <strong>base luck</strong>, and your <strong>equipment luck</strong>.
 							</p>
 							<h1>Base Luck</h1>
 							<p>
@@ -54,7 +54,7 @@ export default class EquipmentSelectorv2 extends Component {
 							</p>
 							<h1>Equipment Luck</h1>
 							<p>
-								Only 70% of your equipment luck is counted towards your true luck. For the purposes of this calculation, "equipment" includes your luck blessing.
+								Only 70% of your equipment luck is counted towards your true luck. For the purposes of this calculation, your luck blessing is counted as <strong>equipment luck</strong>.
 							</p>
 						</div>
 					</div>

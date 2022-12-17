@@ -142,7 +142,7 @@
 		"stalls": [
 			{
 				"name": "Hildebrant's Cellar",
-				"base": 95,
+				"base": 90,
 				"type": "fixed",
 				"cost": {"value": 1, "type": "Lockpick"},
 				"outcomes": [

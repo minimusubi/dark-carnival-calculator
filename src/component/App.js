@@ -379,6 +379,7 @@ export default class App extends Component {
 				</div> */}
 				<footer>
 					<div>Built with <a href='https://preactjs.com/'>Preact</a> by <span class='mention'>@summer musubi</span>.</div>
+					<div>View raw data files: <a href='/data/equipment.json'>equipment.json</a> | <a href='/data/stalls.json'>stalls.json</a></div>
 					<div>For use with <span class='mention'>@Droll</span>, the Dark Carnival bot built by <span class='mention'>@Senerio</span> in the <a href='https://discord.com/invite/fortheking'>For the King Discord server</a>.</div>
 				</footer>
 			</div>

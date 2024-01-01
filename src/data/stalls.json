@@ -439,6 +439,22 @@
 				"details": "Chance increases by 5% for each tip, up to five times."
 			},
 			{
+				"name": "Busker Encore",
+				"base": 35,
+				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
+				"cost": null,
+				"outcomes": [
+					{"value": 1, "type": "Encourage"},
+					{"value": 1, "type": "Encourage"},
+					{"value": 1, "type": "Encourage"},
+					{"value": 2, "type": "Encourage"},
+					{"value": 2, "type": "Encourage"}
+				]
+			},
+			{
 				"name": "Wandering Monk",
 				"base": 35,
 				"type": "fixed",

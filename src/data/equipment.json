@@ -33,7 +33,7 @@
 			"value": 8
 		},
 		{
-			"name": "Highroller's Hat",
+			"name": "High Roller's Hat",
 			"value": 9
 		},
 		{
@@ -91,7 +91,7 @@
 			"value": 8
 		},
 		{
-			"name": "Highroller's Armor",
+			"name": "High Roller's Armor",
 			"value": 9
 		},
 		{
@@ -145,7 +145,7 @@
 			"value": 8
 		},
 		{
-			"name": "Highroller's Boots",
+			"name": "High Roller's Boots",
 			"value": 9
 		},
 		{
@@ -157,19 +157,15 @@
 			"value": 10
 		},
 		{
-			"name": "Fraybee's Sandals",
+			"name": "Bandit King's Fur Boots",
 			"value": 14
 		},
 		{
-			"name": "Bandit King's Fur Boots",
+			"name": "Fraybee's Sandals",
 			"value": 14
 		}
 	],
 	"amulet": [
-		{
-			"name": "Tuft of White Hair",
-			"value": 3
-		},
 		{
 			"name": "Fancy Ruff",
 			"value": 4
@@ -197,13 +193,13 @@
 		{
 			"name": "White Cat",
 			"value": 15
+		},
+		{
+			"name": "Enchanted Scale",
+			"value": 20
 		}
 	],
 	"trinket": [
-		{
-			"name": "Tuft of Black Hair",
-			"value": 2
-		},
 		{
 			"name": "Golden Feather",
 			"value": 4
@@ -219,6 +215,14 @@
 		{
 			"name": "Four Leaf Clover",
 			"value": 10
+		},
+		{
+			"name": "Friendship Ring",
+			"value": 10
+		},
+		{
+			"name": "Enchanted Fin",
+			"value": 11
 		},
 		{
 			"name": "Black Cat",

@@ -333,7 +333,7 @@ export default class App extends Component {
 							<li><span class='mention'>@alifee</span> calculation and simulation assistance</li>
 							<li><span class='mention'>@peace</span> providing encourage calculations</li>
 							<li><span class='mention'>@Robby</span> correcting and verifying calculations</li>
-							<li><span class='mention'>@Gcon03</span> continuously helping keep this up to date</li>
+							<li><span class='mention'>@✨Vivi✨</span> continuously helping keep this up to date</li>
 							<li>Everyone else who has made suggestions or reports</li>
 						</ul>
 					</p>

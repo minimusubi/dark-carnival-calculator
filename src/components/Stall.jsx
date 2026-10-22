@@ -177,7 +177,9 @@ export default class Stall extends Component {
 					<div
 						class='background'
 						style={{
-							'--stall-image': `url(/assets/stall/${this.props.data.name
+							'--stall-image': `url(/assets/stall/${(
+								this.props.data.image ?? this.props.data.name
+							)
 								.toLowerCase()
 								.replaceAll(/[^a-z0-9 -]+/g, '')
 								.replaceAll(/ +/g, '-')}.png)`,

@@ -350,6 +350,7 @@
 			},
 			{
 				"name": "Wicked Wishing Well (Lucky)",
+				"image": "Wicked Wishing Well",
 				"base": 75,
 				"type": "fixed",
 				"options": {

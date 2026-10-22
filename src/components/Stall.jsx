@@ -186,6 +186,16 @@ export default class Stall extends Component {
 							flex: 1,
 						}}
 					>
+						{(
+							this.props.data.options?.noEffect?.includes(
+								'encourage',
+							)
+						) ?
+							<img
+								class='unfocusable'
+								src='/assets/unfocusable.png'
+							></img>
+						:	null}
 						{outcomes}
 					</div>
 					{/* <div style={{flex: 1}} /> */}

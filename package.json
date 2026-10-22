@@ -20,7 +20,6 @@
     "sirv-cli": "^3.0.1"
   },
   "dependencies": {
-    "lz-string": "^1.4.4",
     "preact": "^10.11.3",
     "preact-render-to-string": "^6.5.13"
   }

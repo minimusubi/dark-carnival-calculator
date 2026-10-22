@@ -4,7 +4,6 @@ import Stall from './Stall.js';
 import Dialog from './Dialog.js';
 import StatusOptions from './StatusOptions.js';
 import EquipmentSelector from './EquipmentSelectorv2.js';
-import LZString from 'lz-string';
 
 import '../css/style';
 import '../css/font';
@@ -31,8 +30,7 @@ export default class App extends Component {
 				distracted: false
 			},
 			equipment: {},
-			isIntroOpen: false,
-			validateTimeout: null
+			isIntroOpen: false
 		};
 		
 		// Set default options
@@ -75,23 +73,6 @@ export default class App extends Component {
 			options: {...this.state.options, ...options},
 			equipment: {...this.state.equipment, ...equips}
 		};
-		
-		// Prevent multiple conflicting options from being enabled
-		let singleOptions = 0;
-		if (newState.options.encouraged) {
-			singleOptions++;
-		}
-		if (newState.options.drollDistracted) {
-			singleOptions++;
-		}
-		if (newState.options.storming) {
-			singleOptions++;
-		}
-		if (singleOptions > 1) {
-			newState.options.encouraged = false;
-			newState.options.drollDistracted = false;
-			newState.options.storming = false;
-		}
 		
 		// Migrate old equipment
 		let equipmentRevision = window.localStorage.getItem('equipmentRevision') ?? 0;
@@ -182,12 +163,6 @@ export default class App extends Component {
 				callback();
 			}
 			
-			// Validate equipment
-			if (this.state.validateTimeout) {
-				clearTimeout(this.state.validateTimeout);
-			}
-			this.setState({validateTimeout: setTimeout(this.validate, 10000)});
-			
 			// Save only those state properties which are a part of equipment.json
 			window.localStorage.setItem('equipment', JSON.stringify(this.state.equipment, (key, value) => {
 				// The initial object is referred to as ''
@@ -209,14 +184,6 @@ export default class App extends Component {
 		}, () => {
 			if (callback) {
 				callback();
-			}
-			
-			// Validate equipment
-			if ((options.totalLuck ?? options.goldMultiplier) !== undefined) {
-				if (this.state.validateTimeout) {
-					clearTimeout(this.state.validateTimeout);
-				}
-				this.setState({validateTimeout: setTimeout(this.validate, 10000)});
 			}
 			
 			// Save options
@@ -249,16 +216,6 @@ export default class App extends Component {
 				},
 			};
 			
-			// Validate equipment
-			if ((newState.options.totalLuck ?? newState.options.goldMultiplier) !== undefined) {
-				if (this.state.validateTimeout) {
-					clearTimeout(this.state.validateTimeout);
-				}
-				this.setState({validateTimeout: setTimeout(() => {
-					this.validate(matches.groups.u, matches.groups.d);
-				}, 10000)});
-			}
-			
 			// Calculate luck
 			newState.computedLuck = this.getComputedLuck(newState.options, newState.equipment);
 			
@@ -277,32 +234,6 @@ export default class App extends Component {
 				window.localStorage.setItem('options', JSON.stringify(this.state.options));
 			});
 		}
-	};
-	
-	validate = (u, d) => {
-		// clearTimeout(this.state.validateTimeout);
-		// this.setState({validateTimeout: null});
-		
-		// fetch('/validate', {
-		// 	method: 'POST',
-		// 	cache: 'no-cache',
-		// 	headers: {
-		// 		// 'Content-Type': 'application/json'
-		// 		'Content-Type': 'text/plain; charset=utf-8'
-		// 	},
-		// 	body: LZString.compressToUTF16(JSON.stringify({
-		// 		u,
-		// 		d,
-		// 		stats: {
-		// 			totalLuck: this.state.options.totalLuck,
-		// 			goldMultiplier: this.state.options.goldMultiplier,
-		// 			...this.state.equipment
-		// 		}
-		// 	}))
-		// }).then((response) => {
-		// 	// Validate response
-		// 	response.json();
-		// });
 	};
 	
 	getComputedLuck(options, equips) {

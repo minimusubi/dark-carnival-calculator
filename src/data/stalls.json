@@ -470,6 +470,9 @@
 				"name": "Traveling Healer",
 				"base": 35,
 				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
 				"cost": { "value": 50, "type": "Gold" },
 				"outcomes": [
 					"Nothing",

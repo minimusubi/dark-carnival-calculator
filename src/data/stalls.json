@@ -108,6 +108,7 @@
 				"name": "Poisonous Dunk Tank",
 				"base": -5,
 				"max": 90,
+				"cost": { "value": 2, "type": "Ticket" },
 				"outcomes": [
 					"+1 Disease",
 					"+2 Poison",
@@ -120,6 +121,7 @@
 				"name": "Acidic Dunk Tank",
 				"base": -25,
 				"max": 70,
+				"cost": { "value": 2, "type": "Ticket" },
 				"outcomes": [
 					{ "value": 1, "type": "Acid Bath", "counter": false },
 					"+1 Acid",

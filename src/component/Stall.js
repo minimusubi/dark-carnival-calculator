@@ -1,19 +1,10 @@
 import {Component} from 'preact';
 import Image from './Image.js';
+import calculateOutcomeProbabilities from '../calculateOutcomeProbabilities.js';
 import '../css/stall.css';
 
-const Probability = {
-	// https://discord.com/channels/283779835883683841/805198723234660362/826529925807865866
-	ENCOURAGE: 0.2,
-	// https://discord.com/channels/283779835883683841/805198723234660362/807484940701663273
-	SCARE: 0.5,
-	// https://discord.com/channels/283779835883683841/805198723234660362/830909853685383231
-	DROLL_DISTRACT: 0.25,
-	// https://discord.com/channels/283779835883683841/805198723234660362/829851738051575828
-	STORM: 0.2,
-	// https://discord.com/channels/283779835883683841/805198723234660362/830909853685383231
-	DISTRACT: 0.15
-};
+// https://discord.com/channels/283779835883683841/805198723234660362/807484940701663273
+const PROBABILITY_SCARE = 0.5;
 const MAX_STALL_LUCK = 95;
 
 export default class Stall extends Component {
@@ -42,38 +33,6 @@ export default class Stall extends Component {
 		return number;
 	}
 
-	factorial(number) {
-		let result = 1;
-		
-		for (let i = 2; i <= number; i++) {
-			result = result * i;
-		}
-		
-		return result;
-	}
-	
-	// From n choose k (nCk)
-	choose(n, k) {
-		return this.factorial(n) / (this.factorial(k) * this.factorial(n - k));
-	}
-	
-	binomialDistribution(n, k, probability) {
-		return this.choose(n, k) * Math.pow(probability, k) * Math.pow(1 - probability, n - k);
-	}
-	
-	and(probability1, probability2) {
-		return probability1 * probability2;
-	}
-	
-	or(probability1, probability2) {
-		return probability1 + probability2 - this.and(probability1, probability2);
-	}
-	
-	getProbability(rolls, successCount, successChance) {
-		// return this.choose(rolls, successCount) * Math.pow(successChance, successCount) * Math.pow(1 - successChance, rolls - successCount);
-		return this.binomialDistribution(rolls, successCount, successChance);
-	}
-	
 	createOutcome(labelElement, probability, outcome) {
 		return <div class='outcome'>
 			<div class='label hexagon'>
@@ -104,80 +63,33 @@ export default class Stall extends Component {
 		if (this.props.data.type === 'fixed') {
 			trueLuck = this.props.data.base;
 		}
-		let eligibleSlots = this.props.data.outcomes.length - 1;
-		
-		if (this.props.stats.shocked) {
-			eligibleSlots -= 1;
-		}
+		const slotCount = this.props.data.outcomes.length - 1;
 		
 		// Scare
 		if (this.props.stats.scared) {
-			outcomes.push(this.createOutcome(<img src='../assets/scare.png' />, Probability.SCARE, 'Get scared and flee'));
+			outcomes.push(this.createOutcome(<img src='../assets/scare.png' />, PROBABILITY_SCARE, 'Get scared and flee'));
 		}
 		
-		// Storm
+		// Storm adds 10 luck
 		if (this.props.stats.storming && !this.props.options.noEffect?.includes('storming')) {
 			trueLuck = Math.min(MAX_STALL_LUCK, Math.max(1, trueLuck + 10));
 		}
 		
-		for (let i = this.props.data.outcomes.length - 1; i >= 0; i--) {
-			// console.log(this.props.data.name, i);
-			let probability = this.getProbability(eligibleSlots, i, trueLuck / 100);
-			
-			/*
-			 * For each outcome (when encourage is on), calculate
-			 * 1) The normal probability of that outcome (for example, rolling 3/4)
-			 * 2) The probability of rolling one less than that outcome (in this case, 2/4)
-			 * 3) The probability of rolling at least one encourage within 3 rolls
-			 * 
-			 * And then basically the probability overall of that outcome is 1 OR (2 AND 3).
-			 * In order to come out with 3/4, you either a) naturally roll a 3/4, or b) roll a 2/4 and get saved by an encourage
-			*/
-			if (this.props.stats.encouraged && !this.props.options.noEffect?.includes('encourage')) {
-				/* let encourageProbability = 0;
-				for (let j = 0; j < i; j++) {
-					console.log('prob of exactly', j, 'encourage rolls out of', i, this.getProbability(i, j, ENCOURAGE_PROBABILITY));
-					encourageProbability += this.getProbability(i, j, ENCOURAGE_PROBABILITY);
-				}
-				let lowerOutcomeProbability = this.getProbability(eligibleSlots, i - 1, trueLuck / 100);
-				
-				probability = this.or(probability, this.and(encourageProbability, lowerOutcomeProbability));
-				
-				// Encourage
-				// probability = this.or(probability, this.and(this.getProbability(slots, i - 1, trueLuck / 100), this.getProbability(1, 1, .20))); */
-				
-				// Binomial + probability of the row below getting moved up - the probability of the current row moving up
-				probability = probability
-					+ (i == 0 ? 0 : this.getProbability(eligibleSlots - (i - 1), 1, Probability.ENCOURAGE) * this.getProbability(eligibleSlots, i - 1, trueLuck / 100))
-					- (i == eligibleSlots ? 0 : this.getProbability(eligibleSlots - i, 1, Probability.ENCOURAGE) * probability);
-				// console.log(`prob + BD(1, ${eligibleSlots - (i - 1)}, 0.2) * PROB(${i - 1}) - BD(1, ${eligibleSlots - i}, 0.2) * PROB(${i})`);
-			}
-			
-			// Droll Distraction
-			if (this.props.stats.drollDistracted) {
-				// Binomial + the probability of the row above moving down - probability of the current row getting moved down
-				probability = probability
-					+ (i == eligibleSlots ? 0 : this.getProbability(i + 1, 1, Probability.DROLL_DISTRACT) * this.getProbability(eligibleSlots, i + 1, trueLuck / 100))
-					- (i == 0 ? 0 : this.getProbability(i, 1, Probability.DROLL_DISTRACT) * probability);
-			}
-			
-			// Storm
-			if (this.props.stats.storming && !this.props.options.noEffect?.includes('storming')) {
-				// Binomial + the probability of the row above moving down - probability of the current row getting moved down
-				probability = probability
-					+ (i == eligibleSlots ? 0 : this.getProbability(i + 1, 1, Probability.STORM) * this.getProbability(eligibleSlots, i + 1, trueLuck / 100))
-					- (i == 0 ? 0 : this.getProbability(i, 1, Probability.STORM) * probability);
-			}
-			
-			// Zero probability when slot is higher than possible rolls
-			if (i > eligibleSlots) {
-				probability = 0;
-			}
-			
+		const outcomeProbabilities = calculateOutcomeProbabilities(slotCount, trueLuck / 100, {
+			shocked: this.props.stats.shocked,
+			storming: this.props.stats.storming && !this.props.options.noEffect?.includes('storming'),
+			drollDistracted: this.props.stats.drollDistracted,
+			distracted: this.props.stats.distracted,
+			encouraged: this.props.stats.encouraged && !this.props.options.noEffect?.includes('encourage')
+		});
+
+		for (let i = slotCount; i >= 0; i--) {
+			let probability = outcomeProbabilities[i];
+
 			// Scare, which has a 50% chance of avoiding the outcome
 			// https://discord.com/channels/283779835883683841/805198723234660362/807484940701663273
 			if (this.props.stats.scared) {
-				probability *= Probability.SCARE;
+				probability *= PROBABILITY_SCARE;
 			}
 			
 			let outcome = this.props.data.outcomes[i];

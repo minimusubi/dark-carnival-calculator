@@ -100,7 +100,7 @@ export default class StatusOptions extends Component {
 						<Image src='../assets/encourage.png' />
 					</label>
 					<div class='input'>
-						<input name='encouraged' type='checkbox' disabled={this.props.options.drollDistracted || this.props.options.storming} checked={this.props.options.encouraged} onInput={this.onInput} />
+						<input name='encouraged' type='checkbox' checked={this.props.options.encouraged} onInput={this.onInput} />
 					</div>
 				</div>
 			</Hint>
@@ -130,7 +130,7 @@ export default class StatusOptions extends Component {
 						<Image src='../assets/distraction.png' />
 					</label>
 					<div class='input'>
-						<input name='drollDistracted' type='checkbox' disabled={this.props.options.encouraged || this.props.options.storming} checked={this.props.options.drollDistracted} onInput={this.onInput} />
+						<input name='drollDistracted' type='checkbox' checked={this.props.options.drollDistracted} onInput={this.onInput} />
 					</div>
 				</div>
 			</Hint>
@@ -140,7 +140,7 @@ export default class StatusOptions extends Component {
 						<Image src='../assets/storm.png' />
 					</label>
 					<div class='input'>
-						<input name='storming' type='checkbox' disabled={this.props.options.encouraged || this.props.options.drollDistracted} checked={this.props.options.storming} onInput={this.onInput} />
+						<input name='storming' type='checkbox' checked={this.props.options.storming} onInput={this.onInput} />
 					</div>
 				</div>
 			</Hint>

@@ -353,7 +353,7 @@
 				"base": 75,
 				"type": "fixed",
 				"options": {
-					"noEffect": ["storming"]
+					"noEffect": ["encourage", "storming"]
 				},
 				"cost": { "value": "?", "type": "Lucky Coin" },
 				"outcomes": [
@@ -363,14 +363,14 @@
 					"?????",
 					{ "value": 1, "type": "Luck", "statLabel": "bonus luck" }
 				],
-				"details": "Cost goes up according to well luck."
+				"details": "Cost goes up according to well luck. For every two luck gained this way, the cost goes up by one. This resets on new game+."
 			},
 			{
 				"name": "Wicked Wishing Well",
 				"base": 50,
 				"type": "fixed",
 				"options": {
-					"noEffect": ["storming"]
+					"noEffect": ["encourage", "storming"]
 				},
 				"cost": null,
 				"outcomes": [
@@ -385,6 +385,9 @@
 				"name": "Fountain of Life",
 				"base": 40,
 				"type": "fixed",
+				"options": {
+					"noEffect": ["encourage"]
+				},
 				"cost": null,
 				"outcomes": [
 					"Nothing",
@@ -513,7 +516,7 @@
 				},
 				"cost": null,
 				"outcomes": ["?????", "?????", "?????", "?????", "?????"],
-				"details": "Requires a White Cat or Black Cat."
+				"details": "Requires a White Cat or Black Cat. Storm rolls that proc are counted as positive rolls, not negative rolls. (https://discord.com/channels/283779835883683841/805198723234660362/1562875449955192924)"
 			},
 			{
 				"name": "Firesilk",

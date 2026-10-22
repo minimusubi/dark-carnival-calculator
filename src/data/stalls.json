@@ -3,14 +3,14 @@
 		"category": "High Roller's Gambit",
 		"required": 75,
 		"options": {
-			"background": "#1C133E",
-			"noEffect": ["storming"]
+			"background": "#1C133E"
 		},
 		"background": "#1C133E",
 		"stalls": [
 			{
 				"name": "Ice of Spades",
 				"base": -15,
+				"max": 80,
 				"outcomes": [
 					"Death",
 					"+3 Frozen",
@@ -22,6 +22,7 @@
 			{
 				"name": "Playing With Fire",
 				"base": -20,
+				"max": 75,
 				"outcomes": [
 					"Gambit Setback",
 					"+2 Confuse",
@@ -33,6 +34,7 @@
 			{
 				"name": "Shock Paper Scissors",
 				"base": -25,
+				"max": 70,
 				"outcomes": [
 					"Gambit Setback",
 					"+3 Shock",
@@ -44,6 +46,7 @@
 			{
 				"name": "A Wager with Chaos",
 				"base": -35,
+				"max": 60,
 				"outcomes": [
 					"Death",
 					"?????",
@@ -104,6 +107,7 @@
 			{
 				"name": "Poisonous Dunk Tank",
 				"base": -5,
+				"max": 90,
 				"outcomes": [
 					"+1 Disease",
 					"+2 Poison",
@@ -115,6 +119,7 @@
 			{
 				"name": "Acidic Dunk Tank",
 				"base": -25,
+				"max": 70,
 				"outcomes": [
 					{ "value": 1, "type": "Acid Bath", "counter": false },
 					"+1 Acid",

@@ -1,6 +1,6 @@
 .modal.overlay {
 	--transition-duration: 200ms;
-	
+
 	position: fixed;
 	display: flex;
 	top: 0;
@@ -12,7 +12,10 @@
 	transform: translateY(-1em);
 	z-index: 10;
 	pointer-events: none;
-	transition: background var(--transition-duration), opacity var(--transition-duration), transform var(--transition-duration);
+	transition:
+		background var(--transition-duration),
+		opacity var(--transition-duration),
+		transform var(--transition-duration);
 }
 
 .modal.overlay.open {
@@ -27,9 +30,13 @@
 @supports (backdrop-filter: blur(9px)) {
 	.modal.overlay {
 		backdrop-filter: blur(0);
-		transition: background var(--transition-duration), opacity var(--transition-duration), backdrop-filter var(--transition-duration), transform var(--transition-duration);
+		transition:
+			background var(--transition-duration),
+			opacity var(--transition-duration),
+			backdrop-filter var(--transition-duration),
+			transform var(--transition-duration);
 	}
-	
+
 	.modal.overlay.open {
 		background: rgba(0 0 0 / 0.25);
 		backdrop-filter: blur(9px);
@@ -39,11 +46,11 @@
 .modal .dialog {
 	min-width: 300px;
 	max-width: 90vw;
-    min-height: 100px;
+	min-height: 100px;
 	max-height: 90vh;
 	margin: auto;
 	border-radius: 3px;
-	background: #36393F;
+	background: #36393f;
 	overflow: auto;
 }
 
@@ -55,7 +62,7 @@
 .modal .dialog > header > h1 {
 	text-align: left;
 	font-size: 1.75rem;
-    font-weight: normal;
+	font-weight: normal;
 }
 
 /* .modal .dialog > header > button {
@@ -90,7 +97,7 @@
 		backdrop-filter: blur(0);
 		transform: translateY(-20px);
 	}
-	
+
 	to {
 		background: rgba(0 0 0 / 0.35);
 		opacity: 1;
@@ -106,7 +113,7 @@
 		backdrop-filter: blur(9px);
 		transform: translateY(0);
 	}
-	
+
 	to {
 		background: rgba(0 0 0 / 0);
 		opacity: 0;

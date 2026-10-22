@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: 'Kingthings Petrock';
-	src: url('../assets/Kingthings_Petrock.ttf');
+	src: url('/assets/Kingthings_Petrock.ttf');
 	font-weight: bold;
 	font-style: normal;
 }

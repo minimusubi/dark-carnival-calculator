@@ -17,10 +17,10 @@
 	width: 400px;
 	margin: 24px 8px 8px 8px;
 	padding: 5px;
-	background: var(--stall-background, #201F1F);
+	background: var(--stall-background, #201f1f);
 	font-size: 20px;
 	font-weight: 300;
-	color: #E3D8CC;
+	color: #e3d8cc;
 }
 
 .stall .container {
@@ -34,7 +34,7 @@
 .stall .title {
 	--end-cap-width: 14px;
 	--end-cap-height: 36px;
-	
+
 	position: absolute;
 	display: flex;
 	top: 6px;
@@ -151,16 +151,22 @@
 }
 
 .stall .divider {
-    margin-bottom: 4px;
+	margin-bottom: 4px;
 	height: 1px;
-    background: linear-gradient(90deg, rgb(0 0 0 / 0) 5%, rgba(var(--accent-raw) / 0.8) 20%, rgba(var(--accent-raw) / 0.8) 80%, rgba(0 0 0 / 0) 95%);
+	background: linear-gradient(
+		90deg,
+		rgb(0 0 0 / 0) 5%,
+		rgba(var(--accent-raw) / 0.8) 20%,
+		rgba(var(--accent-raw) / 0.8) 80%,
+		rgba(0 0 0 / 0) 95%
+	);
 }
 
 .sign {
 	--sign-cap-width: 14px;
 	--sign-cap-height: 36px;
 	--sign-background: var(--primary-dark);
-	
+
 	position: relative;
 	display: flex;
 	margin-right: var(--sign-cap-width);
@@ -204,14 +210,14 @@
 	--end-cap-height-ratio: 3.46410161514px;
 	--end-cap-width: calc(var(--end-cap-width-ratio) * var(--end-cap-scale));
 	--end-cap-height: calc(var(--end-cap-height-ratio) * var(--end-cap-scale));
-	
+
 	position: relative;
 	display: inline-block;
 	width: calc(var(--end-cap-width) * 2);
 	height: var(--end-cap-height);
 	margin: 0 calc(var(--end-cap-width) + 8px) 0 var(--end-cap-width);
 	background: var(--primary-light);
-	color: #FFF;
+	color: #fff;
 	font-size: 28px;
 	font-weight: 700;
 	text-align: center;

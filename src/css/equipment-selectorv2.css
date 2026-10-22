@@ -1,6 +1,6 @@
 .equipmentv2 {
 	/* --equipment-height: 113px; */
-	
+
 	position: relative;
 	top: -2px;
 	height: 0;
@@ -8,7 +8,9 @@
 	border-bottom: 2px solid var(--accent);
 	background: #202225;
 	text-align: center;
-	transition: left 250ms, opacity 250ms;
+	transition:
+		left 250ms,
+		opacity 250ms;
 	/* z-index: 2; */
 }
 
@@ -20,7 +22,7 @@
 
 .equipmentv2.open {
 	top: 0;
-    height: auto;
+	height: auto;
 	/* box-shadow: 0 0 8px 4px rgb(0 0 0 / 35%); */
 }
 
@@ -61,7 +63,7 @@
 	position: absolute;
 	bottom: -1.25em;
 	display: flex;
-    width: 100%;
+	width: 100%;
 	pointer-events: none;
 }
 
@@ -73,10 +75,10 @@
 	margin: 0 auto;
 	padding: 0 0.375rem;
 	border: 2px solid var(--accent);
-    border-radius: 100vmax;
+	border-radius: 100vmax;
 	outline: none;
-    background: #202225;
-	color: #FFF;
+	background: #202225;
+	color: #fff;
 	font-size: 0.875rem;
 	cursor: pointer;
 	z-index: 1;
@@ -115,7 +117,7 @@
 	margin: 0 auto;
 	padding: 0 1em;
 	border-radius: 3px;
-	background: #393C43;
+	background: #393c43;
 }
 
 .information p,

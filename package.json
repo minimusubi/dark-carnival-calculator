@@ -1,26 +1,25 @@
 {
-  "scripts": {
-    "build": "preact build --template src/template.html && node build-prep.mjs",
-    "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch --template src/template.html",
-    "lint": "eslint src"
-  },
-  "eslintConfig": {
-    "extends": "preact"
-  },
-  "eslintIgnore": [
-    "build/*"
-  ],
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "@babel/eslint-plugin": "^7.19.1",
-    "eslint": "^8.29.0",
-    "eslint-config-preact": "^1.1.4",
-    "preact-cli": "^3.4.1",
-    "sirv-cli": "^3.0.1"
-  },
-  "dependencies": {
-    "preact": "^10.11.3",
-    "preact-render-to-string": "^6.5.13"
-  }
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite",
+		"format": "prettier . --write",
+		"lint": "eslint src",
+		"preview": "vite preview",
+		"test": "node --test"
+	},
+	"dependencies": {
+		"preact": "^11.0.0"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.10.6",
+		"eslint": "^9.39.5",
+		"eslint-config-preact": "^2.0.0",
+		"eslint-config-prettier": "^10.1.8",
+		"prettier": "^3.9.10",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.71.2",
+		"vite": "^8.3.1",
+		"vite-plugin-static-copy": "^4.1.1"
+	}
 }

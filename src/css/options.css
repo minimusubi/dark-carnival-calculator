@@ -7,7 +7,7 @@
 	padding: 8px 0;
 	border-bottom: 2px solid var(--accent);
 	/* background: linear-gradient(to bottom, #36393f 80%, rgba(0 0 0 / 0)); */
-	background: #36393F;
+	background: #36393f;
 	/* z-index: 1; */
 }
 
@@ -18,7 +18,7 @@
 .options .input {
 	display: flex;
 	padding: 0 10px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-	background: #40444B;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background: #40444b;
 }
